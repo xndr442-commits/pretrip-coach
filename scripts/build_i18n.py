@@ -7,7 +7,7 @@ by the AI grader against the English concept list; the shared defect vocabulary
 below also gives the OFFLINE keyword grader usable synonyms per language.
 """
 import json, os
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 
 # shared defect vocabulary — covers the concepts reused across most items
 VOCAB = {

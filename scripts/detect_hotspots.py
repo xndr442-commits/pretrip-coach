@@ -13,7 +13,7 @@ import json, os
 import numpy as np
 from PIL import Image
 
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 MAN = f"{ROOT}/assets/reference/curated/manifest.json"
 
 def orange_mask(a):

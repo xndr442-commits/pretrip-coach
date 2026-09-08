@@ -1,0 +1,273 @@
+{
+ "_README": "Golden fixtures for the offline concept grader. These define correct behaviour in all three languages. A grader that passes all of these is trustworthy enough to build on; one that does not, is not. Tests 1-5 are the Checkpoint 1 gate. Vague answers MUST score zero, correct paraphrase MUST score full, and a bare defect word ('there are cracks') must never satisfy its negation ('no cracks').",
+ "count": 21,
+ "tests": [
+  {
+   "item": "lug_nuts",
+   "lang": "en",
+   "transcript": "they're tight and all there",
+   "expect_hit": [
+    "secure",
+    "all_present"
+   ],
+   "expect_missed": [
+    "no_cracks",
+    "rust"
+   ]
+  },
+  {
+   "item": "lug_nuts",
+   "lang": "en",
+   "transcript": "they are not loose, none are missing, no cracks, and no rust streaks",
+   "expect_hit": [
+    "secure",
+    "all_present",
+    "no_cracks",
+    "rust"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "front_tire",
+   "lang": "en",
+   "transcript": "the tire looks fine",
+   "expect_hit": [],
+   "expect_missed": [
+    "even_wear",
+    "tread",
+    "no_damage",
+    "no_leak",
+    "no_recap",
+    "pressure"
+   ]
+  },
+  {
+   "item": "lug_nuts",
+   "lang": "es",
+   "transcript": "están apretadas y todas presentes",
+   "expect_hit": [
+    "secure",
+    "all_present"
+   ],
+   "expect_missed": [
+    "no_cracks",
+    "rust"
+   ]
+  },
+  {
+   "item": "lug_nuts",
+   "lang": "pt",
+   "transcript": "estão apertadas e todas presentes",
+   "expect_hit": [
+    "secure",
+    "all_present"
+   ],
+   "expect_missed": [
+    "no_cracks",
+    "rust"
+   ]
+  },
+  {
+   "item": "lug_nuts",
+   "lang": "en",
+   "transcript": "tight, all present, no cracks, no rust",
+   "expect_hit": [
+    "secure",
+    "all_present",
+    "no_cracks",
+    "rust"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "frame",
+   "lang": "en",
+   "transcript": "no cracks, not bent or twisted, no illegal welding, and no rust",
+   "expect_hit": [
+    "no_cracks",
+    "not_broken",
+    "no_illegal_welds",
+    "rust"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "windshield",
+   "lang": "en",
+   "transcript": "tight and secure, no cracks, no illegal stickers, clean, nothing blocking my view",
+   "expect_hit": [
+    "secure",
+    "no_cracks",
+    "no_stickers",
+    "clean",
+    "view"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "lug_nuts",
+   "lang": "en",
+   "transcript": "they look good to me",
+   "expect_hit": [],
+   "expect_missed": [
+    "secure",
+    "all_present",
+    "no_cracks",
+    "rust"
+   ]
+  },
+  {
+   "item": "frame",
+   "lang": "en",
+   "transcript": "the frame is fine",
+   "expect_hit": [],
+   "expect_missed": [
+    "no_cracks",
+    "not_broken",
+    "no_illegal_welds",
+    "rust"
+   ]
+  },
+  {
+   "item": "battery",
+   "lang": "en",
+   "transcript": "checked it",
+   "expect_hit": [],
+   "expect_missed": [
+    "secure",
+    "no_cracks",
+    "welds",
+    "connectors",
+    "cables"
+   ]
+  },
+  {
+   "item": "front_tire",
+   "lang": "en",
+   "transcript": "evenly worn with tread depth of four thirty seconds, no cuts or bulges",
+   "expect_hit": [
+    "even_wear",
+    "tread",
+    "no_damage"
+   ],
+   "expect_missed": [
+    "no_leak",
+    "no_recap",
+    "pressure"
+   ]
+  },
+  {
+   "item": "air_chamber",
+   "lang": "en",
+   "transcript": "securely mounted, no cracks, not broken",
+   "expect_hit": [
+    "secure",
+    "no_cracks",
+    "not_broken"
+   ],
+   "expect_missed": [
+    "no_leaks",
+    "clamps"
+   ]
+  },
+  {
+   "item": "frame",
+   "lang": "en",
+   "transcript": "there are cracks and rust on the frame",
+   "expect_hit": [],
+   "expect_missed": [
+    "no_cracks",
+    "not_broken",
+    "no_illegal_welds",
+    "rust"
+   ]
+  },
+  {
+   "item": "windshield",
+   "lang": "en",
+   "transcript": "the windshield has cracks",
+   "expect_hit": [],
+   "expect_missed": [
+    "secure",
+    "no_cracks",
+    "no_stickers",
+    "clean",
+    "view"
+   ]
+  },
+  {
+   "item": "frame",
+   "lang": "es",
+   "transcript": "sin grietas, no está doblado, sin soldaduras ilegales, sin óxido",
+   "expect_hit": [
+    "no_cracks",
+    "not_broken",
+    "no_illegal_welds",
+    "rust"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "windshield",
+   "lang": "es",
+   "transcript": "apretado y seguro, sin grietas, sin calcomanías ilegales, limpio, nada bloquea mi visión",
+   "expect_hit": [
+    "secure",
+    "no_cracks",
+    "no_stickers",
+    "clean",
+    "view"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "lug_nuts",
+   "lang": "es",
+   "transcript": "se ven bien",
+   "expect_hit": [],
+   "expect_missed": [
+    "secure",
+    "all_present",
+    "no_cracks",
+    "rust"
+   ]
+  },
+  {
+   "item": "frame",
+   "lang": "pt",
+   "transcript": "sem rachaduras, não está torto, sem soldas ilegais, sem ferrugem",
+   "expect_hit": [
+    "no_cracks",
+    "not_broken",
+    "no_illegal_welds",
+    "rust"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "windshield",
+   "lang": "pt",
+   "transcript": "apertado e seguro, sem rachaduras, sem adesivos ilegais, limpo, nada bloqueia minha visão",
+   "expect_hit": [
+    "secure",
+    "no_cracks",
+    "no_stickers",
+    "clean",
+    "view"
+   ],
+   "expect_missed": []
+  },
+  {
+   "item": "lug_nuts",
+   "lang": "pt",
+   "transcript": "parecem boas",
+   "expect_hit": [],
+   "expect_missed": [
+    "secure",
+    "all_present",
+    "no_cracks",
+    "rust"
+   ]
+  }
+ ]
+}

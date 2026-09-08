@@ -6,7 +6,7 @@ order matters and the student must announce live numeric readings. Source:
 the "AIR BRAKES TEST" handout.
 """
 import json, os
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 IMG = "assets/reference/curated"
 
 def step(sid, say, must, kind="say", **kw):

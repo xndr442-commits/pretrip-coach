@@ -7,7 +7,7 @@ Run order: extract_assets -> curate_assets -> detect_hotspots
 import hashlib, json, os, shutil, subprocess, sys
 from PIL import Image, ImageStat
 
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 PDF  = f"{ROOT}/source/NEW_MATERIAL_PRE_TRIP.pdf"
 PAGES = f"{ROOT}/assets/reference/pages"
 RAW   = f"{ROOT}/assets/reference/extracted/raw"

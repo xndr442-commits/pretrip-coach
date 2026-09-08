@@ -7,7 +7,7 @@ Run after extract_assets.py. Idempotent.
 import os, json, shutil
 from PIL import Image
 
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 UNIQ = f"{ROOT}/assets/reference/extracted/unique"
 CUR  = f"{ROOT}/assets/reference/curated"
 

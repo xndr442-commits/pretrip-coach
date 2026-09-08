@@ -6,7 +6,7 @@ duplicate ids, and that every graded number traces back to `standards`.
 """
 import json, os, sys, re
 
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 errors, warnings = [], []
 def err(m): errors.append(m)
 def warn(m): warnings.append(m)

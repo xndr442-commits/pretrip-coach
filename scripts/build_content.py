@@ -13,7 +13,7 @@ handout + the official Class A Vehicle Inspection checklist (§11M).
 """
 import json, os
 
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 IMG  = "assets/reference/curated"
 
 # ── reusable concept builders ────────────────────────────────────────────────

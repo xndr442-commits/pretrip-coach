@@ -12,7 +12,7 @@ Output: content/i18n/concepts.es.json and concepts.pt.json
 """
 import json, os
 
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 
 # "item.concept": (spanish phrases, portuguese phrases)
 C = {

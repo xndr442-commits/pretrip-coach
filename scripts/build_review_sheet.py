@@ -6,7 +6,7 @@ to students until this is signed. Output: review/content_signoff.html (print to 
 """
 import json, os, html
 
-ROOT = os.path.expanduser("~/Desktop/PreTripCoach")
+ROOT = os.path.expanduser("~/Projects/PreTripCoach")
 os.makedirs(f"{ROOT}/review", exist_ok=True)
 d = json.load(open(f"{ROOT}/content/pretrip.en.json"))
 a = json.load(open(f"{ROOT}/content/airbrakes.en.json"))
