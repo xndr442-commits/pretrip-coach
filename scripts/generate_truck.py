@@ -94,10 +94,9 @@ def shell():
 
     box("body_hood", (1.05, 0, 1.42), (2.10, W - 0.10, 0.64), "#1D6A4A")
     box("body_bumper", (-0.10, 0, 0.72), (0.22, W, 0.34), steel)
-    box("body_cab", (3.60, 0, 2.10), (2.90, W, 1.90), "#1D6A4A")
-    box("body_sleeper", (5.10, 0, 2.05), (1.10, W - 0.06, 1.80), "#1D6A4A")
-    box("body_roof_fairing", (4.60, 0, 3.55), (2.20, W - 0.14, 0.80), white)
-    box("body_catwalk", (5.35, 0, 1.16), (0.70, 1.10, 0.05), steel)
+    box("body_cab", (3.35, 0, 2.10), (2.40, W, 1.90), "#1D6A4A")
+    box("body_roof_fairing", (3.90, 0, 3.35), (1.40, W - 0.14, 0.60), white)
+    box("body_catwalk", (5.10, 0, 1.16), (0.95, 1.10, 0.05), steel)
     for side in (1, -1):
         box(f"body_frame_{'l' if side > 0 else 'r'}",
             (3.60, side * 0.46, 1.02), (6.60, 0.09, 0.24), steel)

@@ -21,14 +21,14 @@ DRIVE_X    = STEER_X + WB        # 5.85 tandem centre
 DRIVE_A    = DRIVE_X - 0.68      # 5.17
 DRIVE_B    = DRIVE_X + 0.68      # 6.53
 FRAME_TOP  = 1.10
-FIFTH_X    = DRIVE_X - 0.30      # 5.55
+FIFTH_X    = DRIVE_X            # 5.85 over the tandem centre
 FIFTH_Z    = 1.25
 HOOD_END   = 2.10
-CAB_END    = 5.60
+CAB_END    = 4.55                # day cab -- clears the trailer nose
 TIRE_R     = 0.535
 CAB_FLOOR  = 1.45
 
-TRL_NOSE   = FIFTH_X - 0.90      # 4.65
+TRL_NOSE   = FIFTH_X - 0.90      # 4.95, giving 0.40 m cab clearance
 TRL_LEN    = 16.15
 TRL_END    = TRL_NOSE + TRL_LEN  # 20.80
 TRL_FLOOR  = 1.25
@@ -56,7 +56,7 @@ def ctrl(cid, pos, size, color, note, prim="box"):
               "rotation_deg": [0, 0, 0], "color": color, "mirror_y": False, "note": note})
 
 # ── FRONT OF TRUCK ──────────────────────────────────────────────────────────
-part("truck_leveled","front_of_truck","box",(-0.35,0,2.0),(0.15,W,4.0),C["steel"],
+part("truck_leveled","front_of_truck","box",(-0.30,0,0.30),(0.10,1.60,0.12),C["steel"],
      "Whole-vehicle proxy plate in front of the bumper; tap target for 'truck is level, no leaks'")
 part("headlights","front_of_truck","box",(0.06,0.85,1.05),(0.10,0.42,0.26),C["white"],
      "Headlight housing, both sides", mirror=True)
@@ -195,9 +195,10 @@ ctrl("low_air_light",(DASH_X-0.04,0.60,DASH_Z+0.16),(0.02,0.05,0.03),C["red"],
 STATIONS = [
  {"id":"driver_seat",    "camera":[3.05,0.62,CAB_FLOOR+0.72],"look_at":[2.30,0.30,CAB_FLOOR+0.55],"seated":True},
  {"id":"front_of_truck", "camera":[-1.60,0,1.60],            "look_at":[1.10,0,1.10]},
- {"id":"steer_axle",     "camera":[STEER_X,2.60,1.20],       "look_at":[STEER_X,1.10,0.70]},
+ {"id":"steer_axle",     "camera":[STEER_X-0.90,3.35,1.45],  "look_at":[STEER_X,1.05,0.72]},
  {"id":"driver_side",    "camera":[3.80,2.90,1.70],          "look_at":[3.80,1.20,1.10]},
- {"id":"behind_cab",     "camera":[FIFTH_X-0.60,2.10,1.95],  "look_at":[FIFTH_X,0.20,1.30]},
+ {"id":"behind_cab",     "camera":[TRL_NOSE-0.70,2.45,1.05], "look_at":[FIFTH_X,0.10,1.24],
+  "note":"Low and forward of the trailer nose -- the coupling is UNDER the trailer, so a mid-height camera beside it is fully occluded."},
  {"id":"trailer_side",   "camera":[9.50,3.40,1.80],          "look_at":[9.50,1.25,1.40]},
  {"id":"trailer_rear",   "camera":[TRL_END+2.80,0,1.80],     "look_at":[TRL_END,0,1.90]},
 ]

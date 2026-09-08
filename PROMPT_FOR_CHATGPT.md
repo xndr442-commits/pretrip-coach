@@ -45,6 +45,8 @@ Combination ≈ 21.5 m. Origin at the tractor's front bumper centre at ground le
 
 Stations: `driver_seat` · `front_of_truck` · `steer_axle` · `driver_side` · `behind_cab` · `trailer_side` · `trailer_rear`. Tap a waypoint to move between them. **No free roam** — it's nauseating on a phone and the real inspection is a fixed route.
 
+**Occlusion — this is already a known problem, handle it from the start.** A real truck hides its own parts: the battery box covers the fifth wheel, the steer tyre covers the brake chamber, the trailer covers the whole coupling area. I generated the model and confirmed it. No camera placement fixes this for all 53 parts. So: **when a part is selected, fade every mesh between the camera and it to ~15% and disable its collider**, restoring on deselect. Give each station a short orbit arc rather than one fixed eye point, so the player can look around an obstruction the way they'd crouch beside a real truck. See `truck_layout.occlusion_rule`.
+
 **Scoring:**
 ```
 item_score  = required concepts hit / required concepts total
