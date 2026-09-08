@@ -1,0 +1,757 @@
+{
+  "language": "pt",
+  "schema_version": "1.0.0",
+  "for_content_version": "2026.09.08",
+  "note": "Accept-lists for item-specific concepts, keyed '<item_id>.<concept_id>'. Shared defect vocabulary lives in i18n/<lang>.json -> defect_vocabulary. Used by the OFFLINE keyword grader; the AI grader works semantically and does not need these.",
+  "concepts": {
+    "seat_belt.no_cuts": [
+      "sem cortes",
+      "sem desfiar",
+      "não está rasgado",
+      "sem rasgos"
+    ],
+    "seat_belt.latches": [
+      "trava",
+      "fecha",
+      "engata",
+      "solta corretamente",
+      "abre e fecha"
+    ],
+    "valves_up.both_valves": [
+      "amarela",
+      "freio de estacionamento",
+      "vermelha",
+      "suprimento de ar do reboque"
+    ],
+    "valves_up.up_position": [
+      "posição para cima",
+      "puxadas",
+      "acionadas",
+      "para fora"
+    ],
+    "gearshift_neutral.neutral": [
+      "ponto morto",
+      "em ponto morto",
+      "neutro"
+    ],
+    "safe_start.brakes_set": [
+      "freios acionados",
+      "freio de estacionamento",
+      "válvulas para cima",
+      "freios aplicados"
+    ],
+    "safe_start.neutral": [
+      "ponto morto",
+      "em ponto morto",
+      "neutro"
+    ],
+    "safe_start.abs_def": [
+      "abs",
+      "def",
+      "as luzes acendem",
+      "apagam",
+      "luzes de advertência"
+    ],
+    "safe_start.start": [
+      "dou partida",
+      "ligo o motor",
+      "arranco o motor"
+    ],
+    "air_compressor_governor.range": [
+      "120",
+      "140",
+      "cento e vinte",
+      "cento e quarenta",
+      "pressão total"
+    ],
+    "air_compressor_governor.governor": [
+      "governador",
+      "corte",
+      "corta"
+    ],
+    "air_compressor_governor.reading": [
+      "psi",
+      "libras",
+      "a pressão é"
+    ],
+    "air_compressor_governor.air_release": [
+      "liberação de ar",
+      "escuto o ar",
+      "escape de ar",
+      "solta o ar"
+    ],
+    "air_leak_test.engine_off": [
+      "motor desligado",
+      "chave ligada",
+      "desligo o motor"
+    ],
+    "air_leak_test.valves_in": [
+      "válvulas para dentro",
+      "empurro as válvulas",
+      "para dentro"
+    ],
+    "air_leak_test.hold_pedal": [
+      "piso o freio",
+      "seguro o pedal",
+      "mantenho o freio",
+      "90 libras"
+    ],
+    "air_leak_test.one_minute": [
+      "um minuto",
+      "60 segundos",
+      "sessenta segundos",
+      "cronômetro"
+    ],
+    "air_leak_test.limit": [
+      "não posso perder mais de",
+      "psi em um minuto",
+      "máximo"
+    ],
+    "air_leak_test.result": [
+      "não perdi",
+      "sem vazamentos",
+      "ainda",
+      "perdi apenas"
+    ],
+    "low_air_warning.fan": [
+      "bombeio",
+      "bombear",
+      "abano",
+      "pisar e soltar"
+    ],
+    "low_air_warning.threshold": [
+      "55",
+      "cinquenta e cinco",
+      "a 55 ou mais"
+    ],
+    "low_air_warning.both": [
+      "luz",
+      "campainha",
+      "alarme",
+      "som"
+    ],
+    "low_air_warning.reading": [
+      "acendeu em",
+      "psi"
+    ],
+    "spring_brakes_popout.range": [
+      "45",
+      "20",
+      "quarenta e cinco",
+      "vinte"
+    ],
+    "spring_brakes_popout.both_pop": [
+      "as duas",
+      "ambas",
+      "saltam",
+      "saltaram",
+      "botões"
+    ],
+    "spring_brakes_popout.no_pull": [
+      "não puxo",
+      "sozinhas",
+      "por si só",
+      "não puxei"
+    ],
+    "spring_brakes_popout.reading": [
+      "saltaram em",
+      "psi"
+    ],
+    "rate_of_buildup.rpm": [
+      "1500",
+      "mil e quinhentas",
+      "rpm",
+      "rotações"
+    ],
+    "rate_of_buildup.alarm_off": [
+      "desliga",
+      "desligou",
+      "55",
+      "cinquenta e cinco"
+    ],
+    "rate_of_buildup.window": [
+      "85",
+      "100",
+      "oitenta e cinco",
+      "cem"
+    ],
+    "rate_of_buildup.limit": [
+      "45 segundos",
+      "quarenta e cinco segundos",
+      "ou menos"
+    ],
+    "rate_of_buildup.reading": [
+      "levou",
+      "segundos"
+    ],
+    "parking_brake_check.red_in": [
+      "válvula vermelha",
+      "empurro a vermelha",
+      "freio do reboque"
+    ],
+    "parking_brake_check.in_gear": [
+      "engatado",
+      "primeira",
+      "tento mover",
+      "solto a embreagem",
+      "em drive"
+    ],
+    "parking_brake_check.result": [
+      "não se move",
+      "não se moveu",
+      "segura",
+      "aguenta"
+    ],
+    "trailer_brake_check.yellow_in": [
+      "válvula amarela",
+      "empurro a amarela",
+      "freio de estacionamento"
+    ],
+    "trailer_brake_check.red_out": [
+      "vermelha puxada",
+      "deixo a vermelha",
+      "suprimento de ar para fora"
+    ],
+    "trailer_brake_check.in_gear": [
+      "engatado",
+      "primeira",
+      "tento mover",
+      "solto a embreagem",
+      "em drive"
+    ],
+    "trailer_brake_check.result": [
+      "não se move",
+      "não se moveu",
+      "freios do reboque funcionam",
+      "quinta roda segura"
+    ],
+    "service_brake_check.both_in": [
+      "ambas as válvulas para dentro",
+      "as duas para dentro",
+      "solto os dois freios"
+    ],
+    "service_brake_check.speed": [
+      "5",
+      "10",
+      "cinco",
+      "dez",
+      "milhas por hora"
+    ],
+    "service_brake_check.apply": [
+      "aplico o freio de serviço",
+      "piso o freio",
+      "freio de serviço"
+    ],
+    "service_brake_check.no_pull": [
+      "não puxa",
+      "para reto",
+      "esquerda nem direita"
+    ],
+    "service_brake_check.feel": [
+      "sem demora",
+      "sem trepidação",
+      "sem ruídos",
+      "normal"
+    ],
+    "light_indicators.high_beam": [
+      "azul",
+      "farol alto",
+      "alto"
+    ],
+    "light_indicators.turn": [
+      "seta verde",
+      "seta",
+      "esquerda",
+      "direita",
+      "pisca"
+    ],
+    "light_indicators.four_way": [
+      "quatro vias",
+      "pisca-alerta",
+      "emergência",
+      "as duas setas"
+    ],
+    "fire_extinguisher.charged": [
+      "carregado",
+      "cheio",
+      "no verde",
+      "o manômetro"
+    ],
+    "fire_extinguisher.current": [
+      "dentro da validade",
+      "não vencido",
+      "em dia",
+      "data"
+    ],
+    "fire_extinguisher.pin": [
+      "pino",
+      "lacre",
+      "trava"
+    ],
+    "triangles.three": [
+      "três",
+      "3",
+      "três peças"
+    ],
+    "triangles.no_damage": [
+      "sem danos",
+      "não danificados",
+      "não quebrados"
+    ],
+    "spare_fuses.present": [
+      "fusíveis reserva",
+      "fusíveis extra",
+      "caixa de fusíveis",
+      "relés"
+    ],
+    "spare_fuses.count": [
+      "seis",
+      "6",
+      "pelo menos seis"
+    ],
+    "windshield.no_stickers": [
+      "sem adesivos",
+      "sem adesivos ilegais",
+      "sem etiquetas"
+    ],
+    "windshield.view": [
+      "nada bloqueia",
+      "visão limpa",
+      "nada obstrui"
+    ],
+    "mirrors.adjusted": [
+      "ajustados para mim",
+      "ajustados",
+      "regulados"
+    ],
+    "mirrors.view": [
+      "nada bloqueia",
+      "visão limpa"
+    ],
+    "wipers.blades": [
+      "palhetas",
+      "sem cortes",
+      "sem rachaduras",
+      "borrachas"
+    ],
+    "wipers.contact": [
+      "uniforme",
+      "fazem contato",
+      "encostados no para-brisa",
+      "rente"
+    ],
+    "washer_fluid.present": [
+      "tem fluido",
+      "tem líquido",
+      "cheio",
+      "presente"
+    ],
+    "heater_defroster.both": [
+      "aquecedor",
+      "desembaçador",
+      "os dois"
+    ],
+    "horns.both": [
+      "buzina de cidade",
+      "buzina de ar",
+      "as duas buzinas"
+    ],
+    "truck_leveled.level": [
+      "nivelado",
+      "reto",
+      "alinhado"
+    ],
+    "truck_leveled.no_puddles": [
+      "sem vazamentos",
+      "sem óleo",
+      "sem graxa",
+      "sem arrefecimento",
+      "nada no chão"
+    ],
+    "headlights.both_beams": [
+      "farol alto",
+      "farol baixo",
+      "os dois faróis"
+    ],
+    "coolant.level": [
+      "nível correto",
+      "nível adequado",
+      "cheio",
+      "na marca"
+    ],
+    "coolant.how": [
+      "visor",
+      "vareta",
+      "reservatório"
+    ],
+    "coolant.hoses": [
+      "mangueiras",
+      "sem cortes",
+      "sem rasgos",
+      "as duas pontas"
+    ],
+    "oil.dipstick": [
+      "vareta"
+    ],
+    "oil.level": [
+      "nível correto",
+      "cheio",
+      "entre as marcas"
+    ],
+    "power_steering.level": [
+      "nível correto",
+      "nível adequado",
+      "cheio"
+    ],
+    "power_steering.how": [
+      "visor",
+      "vareta",
+      "reservatório"
+    ],
+    "power_steering.hoses": [
+      "mangueiras",
+      "sem cortes",
+      "sem rasgos",
+      "as duas pontas"
+    ],
+    "fluid_air_leaks.under": [
+      "embaixo",
+      "por baixo",
+      "embaixo do motor"
+    ],
+    "fluid_air_leaks.hoses": [
+      "mangueiras",
+      "sem cortes",
+      "sem bolhas",
+      "sem vazamentos"
+    ],
+    "pitman_arm.cotter": [
+      "porca castelo",
+      "cupilha",
+      "cupilhas",
+      "contrapino"
+    ],
+    "drag_link.bushings": [
+      "buchas",
+      "borracha",
+      "sem cortes"
+    ],
+    "tie_rod.cotter": [
+      "porca castelo",
+      "cupilha",
+      "cupilhas",
+      "contrapino"
+    ],
+    "front_tire.even_wear": [
+      "desgaste uniforme",
+      "desgaste parelho",
+      "gasto uniforme"
+    ],
+    "front_tire.tread": [
+      "quatro trinta e dois avos",
+      "4/32",
+      "sulco",
+      "profundidade"
+    ],
+    "front_tire.no_damage": [
+      "sem cortes",
+      "sem bolhas",
+      "sem estufamentos",
+      "sem danos"
+    ],
+    "front_tire.no_leak": [
+      "sem vazamento de ar",
+      "não perde ar"
+    ],
+    "front_tire.no_recap": [
+      "sem recapagem",
+      "sem recauchutagem",
+      "não recapado"
+    ],
+    "front_tire.pressure": [
+      "100 psi",
+      "bem calibrado",
+      "pressão correta",
+      "cem libras"
+    ],
+    "rims.no_holes": [
+      "sem furos ilegais",
+      "sem perfurações",
+      "sem buracos"
+    ],
+    "lug_nuts.all_present": [
+      "todas presentes",
+      "não falta nenhuma",
+      "completas"
+    ],
+    "lug_nuts.rust": [
+      "sem ferrugem",
+      "ferrugem",
+      "marcas de ferrugem",
+      "sem corrosão"
+    ],
+    "leaf_springs.not_shifted": [
+      "não deslocadas",
+      "sem cruzar",
+      "alinhadas",
+      "no lugar"
+    ],
+    "shock_absorber.bushings": [
+      "buchas",
+      "borracha",
+      "não gastas"
+    ],
+    "brake_hose.fittings": [
+      "conexões",
+      "as duas pontas",
+      "engates"
+    ],
+    "brake_hose.no_rot": [
+      "sem ressecamento",
+      "não ressecada",
+      "sem desgaste",
+      "não rachada"
+    ],
+    "air_chamber.clamps": [
+      "abraçadeiras",
+      "não faltam",
+      "apertadas"
+    ],
+    "brake_contaminants.drum": [
+      "tambor",
+      "sem rachaduras",
+      "não rachado"
+    ],
+    "brake_contaminants.lining": [
+      "um quarto de polegada",
+      "1/4",
+      "lona",
+      "espessura"
+    ],
+    "brake_contaminants.contaminants": [
+      "sem óleo",
+      "sem graxa",
+      "sem detritos",
+      "sem contaminantes"
+    ],
+    "turn_signal_side.reflectors": [
+      "âmbar",
+      "vermelho",
+      "na frente",
+      "atrás",
+      "refletores"
+    ],
+    "mirrors_side.view": [
+      "nada bloqueia",
+      "visão limpa",
+      "sem adesivos"
+    ],
+    "fuel_tank.cap": [
+      "a tampa",
+      "tampa presente",
+      "tampa apertada"
+    ],
+    "fuel_tank.straps": [
+      "cintas",
+      "abraçadeiras",
+      "tiras"
+    ],
+    "def_tank.cap": [
+      "a tampa",
+      "tampa presente",
+      "tampa apertada"
+    ],
+    "battery.welds": [
+      "soldas quebradas",
+      "sem soldas quebradas"
+    ],
+    "battery.connectors": [
+      "conectores",
+      "terminais",
+      "bornes",
+      "presos"
+    ],
+    "battery.cables": [
+      "cabos",
+      "não expostos",
+      "sem corrosão",
+      "não corroídos",
+      "não rompidos"
+    ],
+    "frame.rust": [
+      "sem ferrugem",
+      "não enferrujado",
+      "sem corrosão"
+    ],
+    "electrical_line.flexible": [
+      "flexível",
+      "não roça",
+      "não toca",
+      "não atrita"
+    ],
+    "electrical_line.no_exposed": [
+      "sem fios expostos",
+      "sem fita ilegal",
+      "não descascado"
+    ],
+    "electrical_line.pins": [
+      "sete pinos",
+      "7 pinos",
+      "os sete",
+      "não tortos"
+    ],
+    "air_lines.colors": [
+      "azul",
+      "vermelha",
+      "linha de serviço",
+      "linha de emergência"
+    ],
+    "air_lines.flexible": [
+      "flexível",
+      "não roça",
+      "não toca"
+    ],
+    "air_lines.no_damage": [
+      "sem cortes",
+      "sem bolhas",
+      "sem vazamentos"
+    ],
+    "air_lines.gladhands": [
+      "glad hands",
+      "vedações",
+      "borrachas",
+      "não gastas",
+      "engates"
+    ],
+    "fifth_wheel_skid.no_gap": [
+      "sem espaço",
+      "sem folga",
+      "não há vão",
+      "encostados"
+    ],
+    "king_pin.apron": [
+      "avental",
+      "bem montado ao reboque",
+      "apron"
+    ],
+    "locking_jaws.locked": [
+      "travada",
+      "posição travada",
+      "toda a volta",
+      "engatada"
+    ],
+    "locking_pins.pins": [
+      "pinos presentes",
+      "engatados",
+      "posição travada"
+    ],
+    "locking_pins.handle": [
+      "alavanca",
+      "manete",
+      "não quebrada",
+      "até o fim",
+      "travada"
+    ],
+    "locking_pins.pivot": [
+      "pinos pivô",
+      "pivôs",
+      "sem rachaduras",
+      "não quebrados"
+    ],
+    "landing_gear.raised": [
+      "levantados",
+      "para cima",
+      "recolhidos",
+      "subidos"
+    ],
+    "landing_gear.handle": [
+      "manivela",
+      "presente",
+      "guardada"
+    ],
+    "dot_tape.present": [
+      "presente",
+      "bem colada",
+      "aderida"
+    ],
+    "dot_tape.coverage": [
+      "cinquenta por cento",
+      "50",
+      "a metade"
+    ],
+    "dot_tape.color": [
+      "vermelha",
+      "branca",
+      "clara"
+    ],
+    "rear_lenses.functions": [
+      "seta",
+      "freio",
+      "emergência",
+      "marcador",
+      "refletor"
+    ],
+    "rr_procedure.flashers_on": [
+      "200 pés",
+      "duzentos pés",
+      "pisca-alerta"
+    ],
+    "rr_procedure.stop_distance": [
+      "15",
+      "50",
+      "quinze",
+      "cinquenta",
+      "pés"
+    ],
+    "rr_procedure.window": [
+      "janela",
+      "abaixo a janela",
+      "escuto",
+      "olho"
+    ],
+    "rr_procedure.clear": [
+      "espaço",
+      "lugar",
+      "liberar os trilhos",
+      "do outro lado"
+    ],
+    "rr_procedure.no_shift": [
+      "sem trocar de marcha",
+      "não troco marcha",
+      "sem mudar a marcha"
+    ],
+    "rr_procedure.flashers_off": [
+      "desligo o pisca-alerta",
+      "pisca-alerta desligado"
+    ],
+    "emergency_procedure.pull_over": [
+      "encosto",
+      "no acostamento",
+      "fora da pista"
+    ],
+    "emergency_procedure.valves_up": [
+      "válvulas para cima",
+      "aciono os freios",
+      "freio de estacionamento"
+    ],
+    "emergency_procedure.neutral": [
+      "ponto morto",
+      "neutro"
+    ],
+    "emergency_procedure.flashers": [
+      "quatro vias",
+      "pisca-alerta",
+      "emergência"
+    ],
+    "emergency_procedure.triangles": [
+      "três triângulos",
+      "triângulos refletores",
+      "dispositivos de advertência"
+    ],
+    "emergency_procedure.traffic": [
+      "verifico o tráfego",
+      "olho o tráfego",
+      "checo o tráfego"
+    ]
+  }
+}

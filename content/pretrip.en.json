@@ -1,0 +1,4168 @@
+{
+  "schema_version": "1.0.0",
+  "content_version": "2026.09.08",
+  "title": "CDL Pre-Trip Inspection & Air Brake Test",
+  "publisher": "Fenix Truck School",
+  "source_documents": [
+    "NEW MATERIAL PRE TRIP.pdf (36 pp)",
+    "AIR BRAKES TEST handout",
+    "Class A Vehicle Inspection checklist §11M (rev. 2022-09-09)"
+  ],
+  "languages": [
+    "en",
+    "es",
+    "pt"
+  ],
+  "vehicle_classes_supported": [
+    "class_a_combination"
+  ],
+  "default_vehicle_class": "class_a_combination",
+  "jurisdictions": {
+    "_note": "The app ships to two schools in two states. Each student is assigned a jurisdiction once; all checklist wording and any threshold overrides come from here. Overrides are deliberately empty until confirmed against each state's current examiner sheet — see docs/06_OPEN_QUESTIONS.md Q1.",
+    "us_fl": {
+      "label": "Florida",
+      "school": "Fenix Truck School — Jacksonville, FL",
+      "checklist_reference": "FL CDL Vehicle Inspection checklist — TO BE CONFIRMED",
+      "checklist_confirmed": false,
+      "_todo": "Alexandre to supply the Florida examiner sheet; thresholds already confirmed.",
+      "threshold_overrides": {}
+    },
+    "us_ma": {
+      "label": "Massachusetts",
+      "school": "Moov — Boston, MA",
+      "checklist_reference": "MA RMV CDL Manual Section 11M, version 2022-09-09",
+      "checklist_confirmed": true,
+      "threshold_overrides": {}
+    }
+  },
+  "default_jurisdiction": "us_fl",
+  "transmissions": [
+    "manual",
+    "automatic"
+  ],
+  "tenancy": {
+    "mode": "single_org",
+    "_note": "Built school-only but tenant-ready: every run, progress and leaderboard row carries an org_id from day one so multi-school can be switched on later without a data migration. See BUILD_SPEC.md."
+  },
+  "standards": {
+    "_note": "Thresholds are configuration, never hardcoded in components. The static leak limit was disputed between the booklet (4 psi/min Class A) and the air-brake handout (3 released / 4 applied); RESOLVED 2026-09-08 by Alexandre in favour of the handout, for both FL and MA. The booklet's figure is retained below as leak_limit_booklet_psi_per_min for reference only and is NOT used for grading.",
+    "_leak_limit_resolved": {
+      "decision": "handout",
+      "released_psi_per_min": 3,
+      "applied_psi_per_min": 4,
+      "decided_by": "Alexandre Felix",
+      "decided_on": "2026-09-08",
+      "applies_to": [
+        "us_fl",
+        "us_ma"
+      ],
+      "confirmed": true
+    },
+    "class_a_combination": {
+      "governor_cutout_psi": [
+        120,
+        140
+      ],
+      "governor_cutin_psi": [
+        85,
+        100
+      ],
+      "leak_limit_released_psi_per_min": 3,
+      "leak_limit_applied_psi_per_min": 4,
+      "leak_limit_booklet_psi_per_min": 4,
+      "leak_limit_source": "AIR BRAKES TEST handout (confirmed 2026-09-08)",
+      "low_air_warning_psi_min": 55,
+      "spring_brake_popout_psi": [
+        20,
+        45
+      ],
+      "buildup_85_to_100_max_seconds": 45,
+      "service_brake_test_speed_mph": [
+        5,
+        10
+      ],
+      "steer_tire_tread_32nds": 4,
+      "other_tire_tread_32nds": 2,
+      "steer_tire_pressure_psi": 100,
+      "brake_lining_min_inches": 0.25
+    },
+    "class_b_straight": {
+      "governor_cutout_psi": [
+        120,
+        140
+      ],
+      "leak_limit_released_psi_per_min": 2,
+      "leak_limit_applied_psi_per_min": 3,
+      "leak_limit_booklet_psi_per_min": 3,
+      "low_air_warning_psi_min": 55,
+      "spring_brake_popout_psi": [
+        20,
+        45
+      ],
+      "buildup_85_to_100_max_seconds": 45,
+      "steer_tire_tread_32nds": 4,
+      "other_tire_tread_32nds": 2
+    }
+  },
+  "grading": {
+    "credit_rule": "You MUST name, point to and/or touch, and fully explain what you are inspecting each safety-critical item for. If you do not, you get no credit.",
+    "pass_threshold_pct": 80,
+    "auto_fail_sections": [
+      "in_cab_brake_check"
+    ],
+    "auto_fail_behaviour": "Missing any auto_fail item ends the run immediately with a FAIL and a written explanation of what was missed."
+  },
+  "sections": [
+    {
+      "id": "in_cab_engine_start",
+      "order": 1,
+      "title": "In-Cab / Engine Start",
+      "checklist_category": "In-Vehicle/Engine Start",
+      "book_pages": [
+        7
+      ],
+      "location": "driver_seat",
+      "items": [
+        {
+          "id": "seat_belt",
+          "label": "Seat Belt",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/01_incab_engine_start/seatbelt.png",
+          "script": "My seat belt is tight and secure at the top and the bottom, no cuts, no fraying, and it latches and releases properly.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cuts",
+              "label": "No cuts or fraying",
+              "accept": [
+                "no cuts",
+                "no fraying",
+                "no frays",
+                "not torn",
+                "no rips"
+              ],
+              "required": true
+            },
+            {
+              "id": "latches",
+              "label": "Latches and releases properly",
+              "accept": [
+                "latches",
+                "buckles",
+                "clicks",
+                "releases properly",
+                "opens and closes"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "Physically tug the belt while you say it. Examiners want to see the check, not just hear it.",
+          "common_errors": []
+        },
+        {
+          "id": "valves_up",
+          "label": "Air Valves — Set",
+          "action": "point_and_operate",
+          "image": "assets/reference/curated/01_incab_engine_start/valves_up.png",
+          "script": "Both air valves are activated in the up position — the yellow parking brake valve and the red trailer air supply valve are pulled out.",
+          "concepts": [
+            {
+              "id": "both_valves",
+              "label": "Names both valves",
+              "accept": [
+                "yellow",
+                "parking brake",
+                "red",
+                "trailer air supply",
+                "trailer supply"
+              ],
+              "required": true
+            },
+            {
+              "id": "up_position",
+              "label": "Valves are up / pulled out",
+              "accept": [
+                "up position",
+                "pulled out",
+                "activated",
+                "set",
+                "out"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "Yellow = tractor parking brake. Red = trailer air supply. Up/out means APPLIED.",
+          "common_errors": []
+        },
+        {
+          "id": "gearshift_neutral",
+          "label": "Gear Shift",
+          "action": "point_and_operate",
+          "image": "assets/reference/curated/01_incab_engine_start/gearshift_neutral.png",
+          "script": "My gear shift lever is in neutral.",
+          "concepts": [
+            {
+              "id": "neutral",
+              "label": "Shifter in neutral",
+              "accept": [
+                "neutral",
+                "in neutral",
+                "ponto morto",
+                "neutro"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "safe_start",
+          "label": "Safe Start",
+          "action": "operate",
+          "image": "assets/reference/curated/01_incab_engine_start/ignition_key.png",
+          "script": "I will safely start the engine: brakes are set, shifter is in neutral. Key to the on position — I check that my ABS and DEF lights come on and go off — then I start the motor.",
+          "concepts": [
+            {
+              "id": "brakes_set",
+              "label": "Brakes set before start",
+              "accept": [
+                "brakes set",
+                "brakes are set",
+                "parking brake on",
+                "valves up"
+              ],
+              "required": true
+            },
+            {
+              "id": "neutral",
+              "label": "Shifter in neutral",
+              "accept": [
+                "neutral",
+                "in neutral"
+              ],
+              "required": true
+            },
+            {
+              "id": "abs_def",
+              "label": "ABS and DEF lights come on and go off",
+              "accept": [
+                "abs",
+                "def",
+                "warning lights come on",
+                "lights go off"
+              ],
+              "required": true
+            },
+            {
+              "id": "start",
+              "label": "Starts the engine",
+              "accept": [
+                "start the motor",
+                "start the engine",
+                "crank"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "If the ABS light stays on, that is a defect — say so out loud.",
+          "common_errors": [
+            "Starting in gear",
+            "Forgetting to call out the ABS/DEF lamp check"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "in_cab_brake_check",
+      "order": 2,
+      "title": "In-Cab Air Brake Check",
+      "checklist_category": "air or hydraulic brake check",
+      "book_pages": [
+        8,
+        9
+      ],
+      "location": "driver_seat",
+      "auto_fail_section": true,
+      "note": "Marked on the official checklist as automatic failure if not performed correctly.",
+      "items": [
+        {
+          "id": "air_compressor_governor",
+          "label": "Air Compressor — Governor Cut-Out",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/air_gauges.png",
+          "script": "With the engine on I fast-idle the truck up to between 120 and 140 psi, at which point the governor cut-out should occur. I'll hear the air release after the cut-out. My needle stopped at ___ psi — cut-out works.",
+          "concepts": [
+            {
+              "id": "range",
+              "label": "120–140 psi range",
+              "accept": [
+                "120",
+                "140",
+                "one twenty",
+                "one forty",
+                "full pressure"
+              ],
+              "required": true
+            },
+            {
+              "id": "governor",
+              "label": "Governor cut-out",
+              "accept": [
+                "governor",
+                "cut out",
+                "cutout",
+                "cut-out"
+              ],
+              "required": true
+            },
+            {
+              "id": "reading",
+              "label": "States the actual reading",
+              "accept": [
+                "psi",
+                "pounds",
+                "pressure is"
+              ],
+              "required": true
+            },
+            {
+              "id": "air_release",
+              "label": "Hears the air release",
+              "accept": [
+                "air release",
+                "hear the air",
+                "pop",
+                "exhaust"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": true,
+          "demonstrate": {
+            "type": "gauge_reading",
+            "target_min": 120,
+            "target_max": 140,
+            "unit": "psi"
+          },
+          "coach_tip": "Say the number you actually see. The grader wants a real reading, not a range.",
+          "common_errors": []
+        },
+        {
+          "id": "air_leak_test",
+          "label": "Static Air Leak Test",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/air_gauges.png",
+          "script": "Engine off, key on, air valves pushed in. I depress and hold the brake pedal, wait for the gauge to stabilize, and start my timer. In one minute I cannot lose more than {{leak_limit_applied_psi_per_min}} psi. Starting at ___ psi — it's been one minute and I lost only ___ psi. I did not lose more than {{leak_limit_applied_psi_per_min}} psi.",
+          "concepts": [
+            {
+              "id": "engine_off",
+              "label": "Engine off, key on",
+              "accept": [
+                "engine off",
+                "key on",
+                "motor off",
+                "shut the engine off"
+              ],
+              "required": true
+            },
+            {
+              "id": "valves_in",
+              "label": "Valves pushed in",
+              "accept": [
+                "pushed in",
+                "valves in",
+                "push in the valves"
+              ],
+              "required": true
+            },
+            {
+              "id": "hold_pedal",
+              "label": "Holds the brake pedal",
+              "accept": [
+                "hold the brake",
+                "depress the brake",
+                "press the pedal",
+                "90 pounds"
+              ],
+              "required": true
+            },
+            {
+              "id": "one_minute",
+              "label": "Times a full minute",
+              "accept": [
+                "one minute",
+                "60 seconds",
+                "sixty seconds",
+                "timer"
+              ],
+              "required": true
+            },
+            {
+              "id": "limit",
+              "label": "States the allowable loss",
+              "accept": [
+                "psi in one minute",
+                "cannot lose more than",
+                "no more than"
+              ],
+              "required": true
+            },
+            {
+              "id": "result",
+              "label": "Reports the actual result",
+              "accept": [
+                "i did not lose",
+                "no air leaks",
+                "still",
+                "lost only"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": true,
+          "demonstrate": {
+            "type": "timer",
+            "seconds": 60,
+            "max_loss_psi": "{{leak_limit_applied_psi_per_min}}"
+          },
+          "coach_tip": "You must actually let 60 seconds run. Rushing the timer is a fail.",
+          "common_errors": []
+        },
+        {
+          "id": "low_air_warning",
+          "label": "Low Air Warning — Light and Buzzer",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/low_air_warning.png",
+          "script": "Engine off, key on, valves pushed in. I fan the brake pedal down. The low air warning light and buzzer must come on at or above 55 psi. It came on at ___ psi — my low air warning works.",
+          "concepts": [
+            {
+              "id": "fan",
+              "label": "Fans the brake pedal down",
+              "accept": [
+                "fan",
+                "fanning",
+                "pump the brake",
+                "pump it down"
+              ],
+              "required": true
+            },
+            {
+              "id": "threshold",
+              "label": "At or above 55 psi",
+              "accept": [
+                "55",
+                "fifty five",
+                "at or above 55"
+              ],
+              "required": true
+            },
+            {
+              "id": "both",
+              "label": "Light AND buzzer",
+              "accept": [
+                "light",
+                "buzzer",
+                "alarm",
+                "sound"
+              ],
+              "required": true
+            },
+            {
+              "id": "reading",
+              "label": "Reports where it came on",
+              "accept": [
+                "it came on at",
+                "psi"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": true,
+          "demonstrate": {
+            "type": "gauge_reading",
+            "target_min": 55,
+            "target_max": 75,
+            "unit": "psi"
+          },
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "spring_brakes_popout",
+          "label": "Spring Brakes — Pop-Out",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/valves_popped_out.png",
+          "script": "I continue fanning the brakes down. Between 45 and 20 psi both brake valves must pop out on their own. I'm looking at the valves, not the gauge — I do not pull the valves. They popped out at ___ psi — my spring brakes work.",
+          "concepts": [
+            {
+              "id": "range",
+              "label": "Between 45 and 20 psi",
+              "accept": [
+                "45",
+                "20",
+                "forty five",
+                "twenty"
+              ],
+              "required": true
+            },
+            {
+              "id": "both_pop",
+              "label": "Both valves pop out",
+              "accept": [
+                "both",
+                "pop out",
+                "popped out",
+                "both buttons"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_pull",
+              "label": "Does not pull the valves",
+              "accept": [
+                "do not pull",
+                "don't pull",
+                "did not pull",
+                "on their own",
+                "by themselves"
+              ],
+              "required": true
+            },
+            {
+              "id": "reading",
+              "label": "Reports the pop-out pressure",
+              "accept": [
+                "they came on at",
+                "popped at",
+                "psi"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": true,
+          "demonstrate": {
+            "type": "gauge_reading",
+            "target_min": 20,
+            "target_max": 45,
+            "unit": "psi"
+          },
+          "coach_tip": "Tell the examiner as EACH valve pops. If only one pops, keep fanning until the second pops.",
+          "common_errors": [
+            "Pulling the valves by hand — automatic fail",
+            "Watching the gauge instead of the valves"
+          ]
+        },
+        {
+          "id": "rate_of_buildup",
+          "label": "Air Pressure Build-Up Rate",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/air_gauges.png",
+          "script": "Parking brakes on, shifter in neutral, I safely start the engine and hold 1500 rpm. First my low air warning must shut off at or above 55 psi. Then I time from 85 to 100 psi at idle — it must take 45 seconds or less. It took ___ seconds.",
+          "concepts": [
+            {
+              "id": "rpm",
+              "label": "Holds engine rpm",
+              "accept": [
+                "1500",
+                "fifteen hundred",
+                "rpm",
+                "1200",
+                "1400"
+              ],
+              "required": true
+            },
+            {
+              "id": "alarm_off",
+              "label": "Warning shuts off at or above 55",
+              "accept": [
+                "shuts off",
+                "goes off",
+                "55",
+                "fifty five"
+              ],
+              "required": true
+            },
+            {
+              "id": "window",
+              "label": "Times 85 to 100 psi",
+              "accept": [
+                "85",
+                "100",
+                "eighty five",
+                "one hundred"
+              ],
+              "required": true
+            },
+            {
+              "id": "limit",
+              "label": "45 seconds or less",
+              "accept": [
+                "45 seconds",
+                "forty five seconds",
+                "or less"
+              ],
+              "required": true
+            },
+            {
+              "id": "reading",
+              "label": "Reports actual seconds",
+              "accept": [
+                "it took",
+                "seconds"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": {
+            "type": "timer",
+            "seconds": 45,
+            "window_psi": [
+              85,
+              100
+            ]
+          },
+          "coach_tip": "Optional in some states, required in others. Check your examiner's sheet.",
+          "common_errors": []
+        },
+        {
+          "id": "parking_brake_check",
+          "label": "Tractor Parking Brake Check",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/valves_popped_out.png",
+          "script": "I release the trailer brake — push the red valve in — put the truck in gear and try to move it lightly. The truck does not move, which means my tractor parking brakes hold.",
+          "concepts": [
+            {
+              "id": "red_in",
+              "label": "Red valve pushed in",
+              "accept": [
+                "red valve",
+                "push the red",
+                "trailer brake released"
+              ],
+              "required": true
+            },
+            {
+              "id": "in_gear",
+              "label": "Puts it in gear and tries to move",
+              "accept": [
+                "in gear",
+                "first gear",
+                "try to move",
+                "let up on the clutch"
+              ],
+              "required": true
+            },
+            {
+              "id": "result",
+              "label": "States the truck did not move",
+              "accept": [
+                "did not move",
+                "doesn't move",
+                "truck stayed",
+                "holds"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": true,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "trailer_brake_check",
+          "label": "Trailer Brake Check",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/valves_popped_out.png",
+          "script": "I release the tractor parking brake — push the yellow valve in — and leave the red valve out. I put the truck in gear and try to move it lightly. The truck does not move, which means my trailer brakes hold and the trailer stayed connected.",
+          "concepts": [
+            {
+              "id": "yellow_in",
+              "label": "Yellow valve pushed in",
+              "accept": [
+                "yellow valve",
+                "push the yellow",
+                "parking brake released"
+              ],
+              "required": true
+            },
+            {
+              "id": "red_out",
+              "label": "Red valve stays out",
+              "accept": [
+                "red valve out",
+                "leave the red out",
+                "trailer air supply out"
+              ],
+              "required": true
+            },
+            {
+              "id": "in_gear",
+              "label": "Puts it in gear and tries to move",
+              "accept": [
+                "in gear",
+                "first gear",
+                "try to move",
+                "let up on the clutch"
+              ],
+              "required": true
+            },
+            {
+              "id": "result",
+              "label": "States the truck did not move",
+              "accept": [
+                "did not move",
+                "doesn't move",
+                "trailer brakes work",
+                "fifth wheel is secure"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": true,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "service_brake_check",
+          "label": "Service Brake Check",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/02_incab_brake_check/service_brake_pedal.png",
+          "script": "I release both parking and trailer brakes — both valves in. I put the truck in gear and move forward between 5 and 10 mph, then apply the service brake. The truck stops straight: no pulling to the left or right, no unusual feel to the pedal, no delay in stopping, no chatter, no unusual sounds or smells.",
+          "concepts": [
+            {
+              "id": "both_in",
+              "label": "Both valves in",
+              "accept": [
+                "both valves in",
+                "release both",
+                "both brakes off"
+              ],
+              "required": true
+            },
+            {
+              "id": "speed",
+              "label": "Rolls 5 to 10 mph",
+              "accept": [
+                "5",
+                "10",
+                "five",
+                "ten",
+                "mph",
+                "miles per hour"
+              ],
+              "required": true
+            },
+            {
+              "id": "apply",
+              "label": "Applies the service brake",
+              "accept": [
+                "apply the service brake",
+                "press the brake",
+                "service brake"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_pull",
+              "label": "Does not pull left or right",
+              "accept": [
+                "does not pull",
+                "doesn't pull",
+                "no pull",
+                "stops straight",
+                "left or right"
+              ],
+              "required": true
+            },
+            {
+              "id": "feel",
+              "label": "No unusual feel, delay, chatter or noise",
+              "accept": [
+                "no delay",
+                "no chatter",
+                "no unusual",
+                "normal feel"
+              ],
+              "required": false
+            }
+          ],
+          "auto_fail": true,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "in_cab_equipment",
+      "order": 3,
+      "title": "Lighting Indicators & Emergency Equipment",
+      "checklist_category": "lighting indicators / emergency equipment",
+      "book_pages": [
+        10
+      ],
+      "location": "driver_seat",
+      "items": [
+        {
+          "id": "light_indicators",
+          "label": "Dashboard Light Indicators",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/04_incab_visibility/heater_defroster.png",
+          "script": "With my lights on I check my dashboard indicators: high beams show a blue light, my right and left turn signals show flashing green arrows, and my four-way flashers show both green arrows flashing together.",
+          "concepts": [
+            {
+              "id": "high_beam",
+              "label": "High beam blue indicator",
+              "accept": [
+                "blue",
+                "high beam",
+                "brights"
+              ],
+              "required": true
+            },
+            {
+              "id": "turn",
+              "label": "Left and right turn indicators",
+              "accept": [
+                "green arrow",
+                "turn signal",
+                "left",
+                "right",
+                "flashing green"
+              ],
+              "required": true
+            },
+            {
+              "id": "four_way",
+              "label": "Four-way flashers",
+              "accept": [
+                "four way",
+                "4-way",
+                "hazards",
+                "both arrows"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "fire_extinguisher",
+          "label": "Fire Extinguisher",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/03_incab_equipment/fire_extinguisher.png",
+          "script": "My fire extinguisher is tight and secure, fully charged in the green, up to date, and the pin is present and secure.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "charged",
+              "label": "Fully charged / in the green",
+              "accept": [
+                "full",
+                "charged",
+                "in the green",
+                "gauge"
+              ],
+              "required": true
+            },
+            {
+              "id": "current",
+              "label": "Up to date",
+              "accept": [
+                "up to date",
+                "not expired",
+                "current",
+                "inspection date"
+              ],
+              "required": true
+            },
+            {
+              "id": "pin",
+              "label": "Pin present and secure",
+              "accept": [
+                "pin",
+                "seal"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "triangles",
+          "label": "Reflective Triangles",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/03_incab_equipment/reflective_triangles.png",
+          "script": "I have three reflective warning triangles, tight and secure, no damage, and clean.",
+          "concepts": [
+            {
+              "id": "three",
+              "label": "Three triangles",
+              "accept": [
+                "three",
+                "3",
+                "3 pieces"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_damage",
+              "label": "No damage",
+              "accept": [
+                "no damage",
+                "not damaged",
+                "not broken"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "spare_fuses",
+          "label": "Spare Fuses",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/03_incab_equipment/spare_fuses.png",
+          "script": "I carry one box of extra fuses and relays — at least six spare fuses.",
+          "concepts": [
+            {
+              "id": "present",
+              "label": "Spare fuses present",
+              "accept": [
+                "spare fuses",
+                "extra fuses",
+                "fuse box",
+                "relays"
+              ],
+              "required": true
+            },
+            {
+              "id": "count",
+              "label": "At least six",
+              "accept": [
+                "six",
+                "6",
+                "at least six"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "Not required if the vehicle has no fuses — say that instead if it's all breakers.",
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "in_cab_visibility",
+      "order": 4,
+      "title": "Windshield, Mirrors, Wipers, Heater & Horns",
+      "checklist_category": "windshield & traffic monitoring devices / wipers & washers / heater & defroster / horn(s)",
+      "book_pages": [
+        11
+      ],
+      "location": "driver_seat",
+      "items": [
+        {
+          "id": "windshield",
+          "label": "Windshield",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/04_incab_visibility/windshield.png",
+          "script": "My windshield is tight and secure, no cracks, no illegal stickers, clean, and nothing is blocking my view.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_stickers",
+              "label": "No illegal stickers",
+              "accept": [
+                "no illegal stickers",
+                "no stickers"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "view",
+              "label": "Nothing blocking the view",
+              "accept": [
+                "nothing blocking",
+                "clear view",
+                "unobstructed"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "mirrors",
+          "label": "Mirrors",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/04_incab_visibility/mirrors.png",
+          "script": "My mirrors are adjusted to me, tight and secure, no cracks, not broken, clean, no illegal stickers, and nothing is blocking my view.",
+          "concepts": [
+            {
+              "id": "adjusted",
+              "label": "Adjusted to the driver",
+              "accept": [
+                "adjusted",
+                "adjusted to me",
+                "set for me"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "view",
+              "label": "Nothing blocking the view",
+              "accept": [
+                "nothing blocking",
+                "clear view"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "wipers",
+          "label": "Windshield Wipers",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/04_incab_visibility/wipers_blade.png",
+          "script": "My wipers are properly mounted with no missing bolts, not broken, blades have no splits or cuts, and they sit even with the windshield.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "blades",
+              "label": "Blades not split or cut",
+              "accept": [
+                "no splits",
+                "no cuts",
+                "blades",
+                "not torn"
+              ],
+              "required": true
+            },
+            {
+              "id": "contact",
+              "label": "Even with the windshield",
+              "accept": [
+                "even",
+                "flush",
+                "makes contact",
+                "against the glass"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "washer_fluid",
+          "label": "Washer Fluid",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/04_incab_visibility/washer_fluid_spray.png",
+          "script": "Washer fluid is present, and the wipers and washer are working properly.",
+          "concepts": [
+            {
+              "id": "present",
+              "label": "Fluid present",
+              "accept": [
+                "present",
+                "fluid",
+                "full",
+                "has fluid"
+              ],
+              "required": true
+            },
+            {
+              "id": "operational",
+              "label": "Demonstrated working",
+              "accept": [
+                "works",
+                "working",
+                "operational",
+                "functions",
+                "operates"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "heater_defroster",
+          "label": "Heater / Defroster",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/04_incab_visibility/heater_defroster.png",
+          "script": "I demonstrate that both my heater and my defroster are operational.",
+          "concepts": [
+            {
+              "id": "both",
+              "label": "Both heater and defroster",
+              "accept": [
+                "heater",
+                "defroster",
+                "defrost"
+              ],
+              "required": true
+            },
+            {
+              "id": "operational",
+              "label": "Demonstrated working",
+              "accept": [
+                "works",
+                "working",
+                "operational",
+                "functions",
+                "operates"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "horns",
+          "label": "Horns",
+          "action": "operate_and_report",
+          "image": "assets/reference/curated/04_incab_visibility/horn.png",
+          "script": "I ensure both horns are operational — my city horn and my highway air horn.",
+          "concepts": [
+            {
+              "id": "both",
+              "label": "Both horns",
+              "accept": [
+                "city horn",
+                "air horn",
+                "highway horn",
+                "both horns"
+              ],
+              "required": true
+            },
+            {
+              "id": "operational",
+              "label": "Demonstrated working",
+              "accept": [
+                "works",
+                "working",
+                "operational",
+                "functions",
+                "operates"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "lights_operations",
+      "order": 5,
+      "title": "Lights Operations Check",
+      "checklist_category": "all external lights",
+      "book_pages": [
+        13
+      ],
+      "location": "walk_around",
+      "type": "light_sequence",
+      "strategy": "Group similar lights together (headlights + high beams; turn signals + 4-way flashers; brake lights + tail lights). Four sides of the truck, four sides of the trailer — follow the flow and you won't miss any.",
+      "sequence": [
+        {
+          "zone": "truck_front",
+          "label": "Front of Truck",
+          "lights": [
+            "clearance lights",
+            "headlights",
+            "high beams",
+            "left turn",
+            "right turn",
+            "4-way flashers"
+          ],
+          "image": "assets/reference/curated/05_lights_operations/tractor_studio.png"
+        },
+        {
+          "zone": "truck_left",
+          "label": "Left Side of Truck",
+          "lights": [
+            "clearance light",
+            "left turn",
+            "4-way flasher"
+          ],
+          "image": "assets/reference/curated/08_side_of_vehicle/tractor_side_a.png"
+        },
+        {
+          "zone": "truck_rear",
+          "label": "Rear of Truck",
+          "lights": [
+            "tail lights",
+            "brake lights",
+            "left turn",
+            "right turn",
+            "4-way flasher"
+          ],
+          "image": "assets/reference/curated/05_lights_operations/marker_light_amber.png"
+        },
+        {
+          "zone": "truck_right",
+          "label": "Right Side of Truck",
+          "lights": [
+            "clearance light",
+            "right turn",
+            "4-way flasher"
+          ],
+          "image": "assets/reference/curated/08_side_of_vehicle/tractor_side_c.png"
+        },
+        {
+          "zone": "trailer_front",
+          "label": "Front of Trailer",
+          "lights": [
+            "clearance lights"
+          ],
+          "image": "assets/reference/curated/05_lights_operations/trailer_front_reefer.png"
+        },
+        {
+          "zone": "trailer_left",
+          "label": "Left Side of Trailer",
+          "lights": [
+            "clearance light",
+            "left turn",
+            "4-way flasher"
+          ],
+          "image": "assets/reference/curated/05_lights_operations/trailer_side_id.png"
+        },
+        {
+          "zone": "trailer_rear",
+          "label": "Rear of Trailer",
+          "lights": [
+            "clearance lights",
+            "tail lights",
+            "brake lights",
+            "left turn",
+            "right turn",
+            "4-way flasher"
+          ],
+          "image": "assets/reference/curated/05_lights_operations/trailer_rear_lit.png"
+        },
+        {
+          "zone": "trailer_right",
+          "label": "Right Side of Trailer",
+          "lights": [
+            "clearance light",
+            "right turn",
+            "4-way flasher"
+          ],
+          "image": "assets/reference/curated/05_lights_operations/marker_light_amber_alt.png"
+        }
+      ]
+    },
+    {
+      "id": "front_operations",
+      "order": 6,
+      "title": "Front of Vehicle / Engine Area",
+      "checklist_category": "lenses / fluid levels / fluid & air leaks / steering systems",
+      "book_pages": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "location": "front_of_truck",
+      "items": [
+        {
+          "id": "truck_leveled",
+          "label": "Truck Leveled",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/05_lights_operations/tractor_studio.png",
+          "script": "My truck is leveled and there are no leaks underneath — no oil, no grease, no coolant.",
+          "concepts": [
+            {
+              "id": "level",
+              "label": "Truck is level",
+              "accept": [
+                "leveled",
+                "level",
+                "sitting level"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_puddles",
+              "label": "No leaks underneath",
+              "accept": [
+                "no leaks",
+                "no oil",
+                "no grease",
+                "no coolant",
+                "nothing on the ground"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "front_lenses",
+          "label": "Clearance, Flasher & Signal Lights",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/05_lights_operations/marker_light_amber.png",
+          "script": "My clearance, flasher and signal lights are tight and secure, no cracks, and the proper color.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "proper_color",
+              "label": "Proper color",
+              "accept": [
+                "proper color",
+                "correct color",
+                "amber",
+                "red",
+                "right color"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "headlights",
+          "label": "Headlights — High and Low Beam",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/05_lights_operations/tractor_studio.png",
+          "script": "My headlights, high beam and low beam, are tight and secure, no cracks, clean, and the proper color.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "proper_color",
+              "label": "Proper color",
+              "accept": [
+                "proper color",
+                "correct color",
+                "amber",
+                "red",
+                "right color"
+              ],
+              "required": true
+            },
+            {
+              "id": "both_beams",
+              "label": "High and low beam",
+              "accept": [
+                "high beam",
+                "low beam",
+                "both beams"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "coolant",
+          "label": "Coolant",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/coolant_reservoir.png",
+          "script": "I verify the coolant is at the proper level through the sight glass or dipstick. The reservoir is properly mounted and not cracked, and the hoses have no splits or cuts and are securely mounted at both ends.",
+          "concepts": [
+            {
+              "id": "level",
+              "label": "Proper level",
+              "accept": [
+                "proper level",
+                "correct level",
+                "full",
+                "at the line"
+              ],
+              "required": true
+            },
+            {
+              "id": "how",
+              "label": "Sight glass or dipstick",
+              "accept": [
+                "sight glass",
+                "dipstick",
+                "reservoir"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "hoses",
+              "label": "Hoses no splits or cuts, secure both ends",
+              "accept": [
+                "hoses",
+                "no splits",
+                "no cuts",
+                "both ends"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "oil",
+          "label": "Engine Oil",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/engine_fluids_wide.png",
+          "script": "I indicate where my dipstick is located and that the oil is at the proper level.",
+          "concepts": [
+            {
+              "id": "dipstick",
+              "label": "Points out the dipstick",
+              "accept": [
+                "dipstick",
+                "stick"
+              ],
+              "required": true
+            },
+            {
+              "id": "level",
+              "label": "Proper level",
+              "accept": [
+                "proper level",
+                "correct level",
+                "full",
+                "between the marks"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "power_steering",
+          "label": "Power Steering Fluid",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/power_steering_reservoir.png",
+          "script": "I verify the power steering fluid is at the proper level through the sight glass or dipstick. The reservoir is securely mounted and not cracked, and the hoses have no splits or cuts and are securely mounted at both ends.",
+          "concepts": [
+            {
+              "id": "level",
+              "label": "Proper level",
+              "accept": [
+                "proper level",
+                "correct level",
+                "full"
+              ],
+              "required": true
+            },
+            {
+              "id": "how",
+              "label": "Sight glass or dipstick",
+              "accept": [
+                "sight glass",
+                "dipstick",
+                "reservoir"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "hoses",
+              "label": "Hoses no splits or cuts, secure both ends",
+              "accept": [
+                "hoses",
+                "no splits",
+                "no cuts",
+                "both ends"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "fluid_air_leaks",
+          "label": "Fluid & Air Leaks",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/engine_hoses.png",
+          "script": "Standing in front of the truck, I ensure there are no leaks underneath the engine compartment. I verify all the hoses in the engine compartment — no cuts, no bubbles, no leaks.",
+          "concepts": [
+            {
+              "id": "under",
+              "label": "Checks underneath the engine",
+              "accept": [
+                "underneath",
+                "under the engine",
+                "below"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leaks",
+              "label": "No leaks",
+              "accept": [
+                "no leaks",
+                "not leaking",
+                "no leak",
+                "no air leaks",
+                "no oil leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "hoses",
+              "label": "All hoses — no cuts, bubbles or leaks",
+              "accept": [
+                "hoses",
+                "no cuts",
+                "no bubbles",
+                "no leaks"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "steering_gear_box",
+          "label": "Steering Gear Box",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/steering_gearbox.png",
+          "script": "My steering gear box is properly mounted to the frame, not cracked, not leaking, all hardware is present, and the hose has no leaks and is properly mounted at both ends.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leaks",
+              "label": "No leaks",
+              "accept": [
+                "no leaks",
+                "not leaking",
+                "no leak",
+                "no air leaks",
+                "no oil leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "pitman_arm",
+          "label": "Pitman Arm",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/steering_gearbox.png",
+          "script": "My pitman arm is not cracked and securely mounted, all hardware is present, and the castle nuts and cotter pins are in place.",
+          "concepts": [
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            },
+            {
+              "id": "cotter",
+              "label": "Castle nuts and cotter pins in place",
+              "accept": [
+                "castle nut",
+                "cotter pin",
+                "cotter pins"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "drag_link",
+          "label": "Drag Link",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/steering_gearbox.png",
+          "script": "My drag link is properly mounted at both ends, all hardware is present, and the rubber bushings are not split or cut and are properly greased.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            },
+            {
+              "id": "bushings",
+              "label": "Rubber bushings not split or cut",
+              "accept": [
+                "bushings",
+                "rubber",
+                "no splits",
+                "not cut"
+              ],
+              "required": true
+            },
+            {
+              "id": "greased",
+              "label": "Properly greased",
+              "accept": [
+                "greased",
+                "properly greased",
+                "fully greased",
+                "lubricated"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "control_arms",
+          "label": "Upper & Lower Control Arms",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/steering_gearbox.png",
+          "script": "My upper and lower control arms are not broken and securely mounted, all hardware present.",
+          "concepts": [
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "tie_rod",
+          "label": "Tie Rod",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/06_front_operations/steering_gearbox.png",
+          "script": "My tie rod is not broken and securely mounted, all hardware present, castle nuts and cotter pins in place.",
+          "concepts": [
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            },
+            {
+              "id": "cotter",
+              "label": "Castle nuts and cotter pins",
+              "accept": [
+                "castle nut",
+                "cotter pin",
+                "cotter pins"
+              ],
+              "required": false
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "steering_axle",
+      "order": 7,
+      "title": "Steering Axle",
+      "checklist_category": "tires / rims / lug nuts / springs & mounts & shocks / brake lines & hoses / brake contaminates",
+      "book_pages": [
+        20,
+        21
+      ],
+      "location": "steer_axle",
+      "items": [
+        {
+          "id": "front_tire",
+          "label": "Front Tire",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/front_tire.png",
+          "script": "My steer tire is evenly worn with tread depth no less than four thirty-seconds. No cuts, no bulges, no bubbles, no air leaks, no recaps on the steer axle, and no flat spots. Properly inflated at around 100 psi.",
+          "concepts": [
+            {
+              "id": "even_wear",
+              "label": "Evenly worn",
+              "accept": [
+                "evenly worn",
+                "even wear",
+                "uniform"
+              ],
+              "required": true
+            },
+            {
+              "id": "tread",
+              "label": "Tread depth at least 4/32",
+              "accept": [
+                "4/32",
+                "four thirty second",
+                "four thirty-seconds",
+                "tread depth"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_damage",
+              "label": "No cuts, bulges or bubbles",
+              "accept": [
+                "no cuts",
+                "no bulges",
+                "no bubbles",
+                "no damage"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leak",
+              "label": "No air leaks",
+              "accept": [
+                "no air leaks",
+                "not leaking"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_recap",
+              "label": "No recaps on the steer axle",
+              "accept": [
+                "no recap",
+                "no retread",
+                "not recapped"
+              ],
+              "required": true
+            },
+            {
+              "id": "pressure",
+              "label": "Properly inflated",
+              "accept": [
+                "100 psi",
+                "properly inflated",
+                "proper pressure"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "Steer tires need 4/32\". Every other tire on the vehicle needs 2/32\". Never call a recap legal on the steer axle.",
+          "common_errors": [
+            "Saying 2/32 on the steer axle",
+            "Saying '4.32 inches' instead of 'four thirty-seconds'"
+          ]
+        },
+        {
+          "id": "rims",
+          "label": "Rims",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/rim_lugnuts.png",
+          "script": "My rims are tight and secure, no cracks, no bends, not broken, no illegal welds, and no illegal holes.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_illegal_welds",
+              "label": "No illegal welds",
+              "accept": [
+                "no illegal welding",
+                "no illegal welds",
+                "no welds",
+                "no illegal weldings"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_holes",
+              "label": "No illegal holes",
+              "accept": [
+                "no illegal holes",
+                "no holes"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "lug_nuts",
+          "label": "Lug Nuts",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/rim_lugnuts.png",
+          "script": "My lug nuts are tight and secure, all present, no cracks, and no rust streaks — if I see rust they might be loose and they need to be tightened. No bolt holes elongated.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "all_present",
+              "label": "All present",
+              "accept": [
+                "all present",
+                "none missing",
+                "all there"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "rust",
+              "label": "No rust streaks (sign of looseness)",
+              "accept": [
+                "no rust",
+                "rust",
+                "rust streaks",
+                "shiny threads"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "Explaining WHY rust matters — 'rust means it may be loose' — is what earns the credit.",
+          "common_errors": []
+        },
+        {
+          "id": "spring_mounts",
+          "label": "Spring Mounts",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/spring_mount.png",
+          "script": "My spring mounts and hardware are not cracked or broken and are properly mounted to the frame.",
+          "concepts": [
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "leaf_springs",
+          "label": "Leaf Springs",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/leaf_springs.png",
+          "script": "My leaf springs are not shifted or scissoring, no illegal welds, and they're properly mounted to the spring hangers.",
+          "concepts": [
+            {
+              "id": "not_shifted",
+              "label": "Not shifted or scissoring",
+              "accept": [
+                "not shifted",
+                "no scissoring",
+                "not scissored",
+                "aligned"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_illegal_welds",
+              "label": "No illegal welds",
+              "accept": [
+                "no illegal welding",
+                "no illegal welds",
+                "no welds",
+                "no illegal weldings"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "u_bolts",
+          "label": "U-Bolts",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/ubolts_shock.png",
+          "script": "My U-bolts are not cracked or broken, no loose parts, and no missing bolts.",
+          "concepts": [
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "hardware",
+              "label": "All hardware present",
+              "accept": [
+                "all hardware present",
+                "hardware is present",
+                "nothing missing",
+                "no missing bolts",
+                "all bolts present"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "shock_absorber",
+          "label": "Shock Absorber",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/ubolts_shock.png",
+          "script": "My shock absorber is not bent or broken and is mounted securely, no visible leaks, and the rubber bushings are not worn.",
+          "concepts": [
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leaks",
+              "label": "No leaks",
+              "accept": [
+                "no leaks",
+                "not leaking",
+                "no leak",
+                "no air leaks",
+                "no oil leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "bushings",
+              "label": "Rubber bushings not worn",
+              "accept": [
+                "bushings",
+                "rubber",
+                "not worn"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "brake_hose",
+          "label": "Air Brake System Hose",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/air_brake_hose.png",
+          "script": "My air brake hose is tight and secure with fittings at both ends, no cracks, no air leaks, not worn, and no dry rot.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "fittings",
+              "label": "Fittings at both ends",
+              "accept": [
+                "fittings",
+                "both ends"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leaks",
+              "label": "No leaks",
+              "accept": [
+                "no leaks",
+                "not leaking",
+                "no leak",
+                "no air leaks",
+                "no oil leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_rot",
+              "label": "Not worn, no dry rot",
+              "accept": [
+                "dry rot",
+                "not worn",
+                "no rot"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "air_chamber",
+          "label": "Air Chamber",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/air_chamber.png",
+          "script": "My air chamber is properly mounted, tight and secure, no cracks, not broken, no air leaks, and the clamps are tight and not missing.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leaks",
+              "label": "No leaks",
+              "accept": [
+                "no leaks",
+                "not leaking",
+                "no leak",
+                "no air leaks",
+                "no oil leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "clamps",
+              "label": "Clamps tight and present",
+              "accept": [
+                "clamps",
+                "clamp",
+                "not missing"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "brake_contaminants",
+          "label": "Brake Drums, Shoes & Linings",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/07_steering_axle/brake_drum_shoes.png",
+          "script": "My brake drum is not cracked and my shoes and linings are not worn thinner than a quarter inch. There are no contaminants — no oil, no grease, no debris between the brake drum and the brake shoes.",
+          "concepts": [
+            {
+              "id": "drum",
+              "label": "Drum not cracked",
+              "accept": [
+                "drum",
+                "not cracked",
+                "no cracks"
+              ],
+              "required": true
+            },
+            {
+              "id": "lining",
+              "label": "Lining thickness",
+              "accept": [
+                "quarter inch",
+                "1/4",
+                "not worn thin",
+                "thickness"
+              ],
+              "required": false
+            },
+            {
+              "id": "contaminants",
+              "label": "No oil, grease or debris",
+              "accept": [
+                "no oil",
+                "no grease",
+                "no debris",
+                "no contaminants"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "'Brake contaminates' is its own line on the official checklist — say the words 'no oil, no grease, no debris' explicitly.",
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "side_of_vehicle",
+      "order": 8,
+      "title": "Side of Vehicle",
+      "checklist_category": "lenses & reflectors / traffic monitoring devices / battery / fuel & DEF tanks / frame",
+      "book_pages": [
+        23
+      ],
+      "location": "driver_side",
+      "items": [
+        {
+          "id": "turn_signal_side",
+          "label": "Turn Signal Light & Reflectors",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/08_side_of_vehicle/tractor_side_a.png",
+          "script": "My turn signal light is tight and secure, no cracks, clean, proper amber color, and it works as a signal light and as an emergency light. My reflectors are amber at the front and red at the back.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "proper_color",
+              "label": "Proper color",
+              "accept": [
+                "proper color",
+                "correct color",
+                "amber",
+                "red",
+                "right color"
+              ],
+              "required": true
+            },
+            {
+              "id": "reflectors",
+              "label": "Amber front, red rear",
+              "accept": [
+                "amber",
+                "red",
+                "front",
+                "back",
+                "reflectors"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "mirrors_side",
+          "label": "Mirrors (Traffic Monitoring Devices)",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/08_side_of_vehicle/tractor_side_b.png",
+          "script": "My mirrors are tight and secure to the door, no cracks, not broken, clean, and no illegal stickers blocking my view.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "view",
+              "label": "Nothing blocking the view",
+              "accept": [
+                "nothing blocking",
+                "no stickers",
+                "clear view"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "fuel_tank",
+          "label": "Fuel Tank",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/08_side_of_vehicle/fuel_def_tank.png",
+          "script": "My fuel tank is tight and secure, no cracks, not bent, no leaks. The cap is present, tight and secure. The straps are secure and not cracked.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leaks",
+              "label": "No leaks",
+              "accept": [
+                "no leaks",
+                "not leaking",
+                "no leak",
+                "no air leaks",
+                "no oil leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "cap",
+              "label": "Cap present and tight",
+              "accept": [
+                "cap",
+                "cap is present",
+                "cap is tight"
+              ],
+              "required": true
+            },
+            {
+              "id": "straps",
+              "label": "Straps secure",
+              "accept": [
+                "straps",
+                "mounting straps"
+              ],
+              "required": false
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "def_tank",
+          "label": "DEF Tank",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/08_side_of_vehicle/fuel_def_tank.png",
+          "script": "My DEF tank is tight and secure, no cracks, not bent, no leaks. The cap is present, tight and secure, no cracks or leaks.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_leaks",
+              "label": "No leaks",
+              "accept": [
+                "no leaks",
+                "not leaking",
+                "no leak",
+                "no air leaks",
+                "no oil leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "cap",
+              "label": "Cap present and tight",
+              "accept": [
+                "cap",
+                "cap is present",
+                "cap is tight"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "battery",
+          "label": "Battery",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/08_side_of_vehicle/battery_box.png",
+          "script": "My battery box and cover are secured, no cracks, no broken welds, and the battery connectors are secured. The cables and wires are not exposed, corroded, ripped or torn.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "welds",
+              "label": "No broken welds",
+              "accept": [
+                "no broken welds",
+                "welds"
+              ],
+              "required": true
+            },
+            {
+              "id": "connectors",
+              "label": "Connectors secured",
+              "accept": [
+                "connectors",
+                "terminals",
+                "secured"
+              ],
+              "required": true
+            },
+            {
+              "id": "cables",
+              "label": "Cables not exposed, corroded or torn",
+              "accept": [
+                "not exposed",
+                "no corrosion",
+                "not corroded",
+                "not torn",
+                "not ripped"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "frame",
+          "label": "Frame",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/08_side_of_vehicle/frame.png",
+          "script": "My frame has no cracks, is not bent, twisted or broken, no illegal welding, and no rust through.",
+          "concepts": [
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_illegal_welds",
+              "label": "No illegal welds",
+              "accept": [
+                "no illegal welding",
+                "no illegal welds",
+                "no welds",
+                "no illegal weldings"
+              ],
+              "required": true
+            },
+            {
+              "id": "rust",
+              "label": "No rust through",
+              "accept": [
+                "no rust",
+                "not rusted"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "combination_vehicle",
+      "order": 9,
+      "title": "Combination Vehicles Only",
+      "checklist_category": "air & electric lines & connectors / fifth wheel / kingpin & apron & gap / locking & safety devices",
+      "book_pages": [
+        25
+      ],
+      "location": "behind_cab",
+      "applies_to": [
+        "class_a"
+      ],
+      "items": [
+        {
+          "id": "electrical_line",
+          "label": "Electrical Line",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/09_combination/air_electrical_lines.png",
+          "script": "My electrical line — the green cable — is flexible and doesn't touch the frame, catwalk, tractor or trailer. No exposed wires and no illegal taping. It's tight and secure to my tractor with the seven pins and to my trailer's electrical box with the seven pins. The pins are not bent or broken, no debris, and all seven are present.",
+          "concepts": [
+            {
+              "id": "flexible",
+              "label": "Flexible, not rubbing",
+              "accept": [
+                "flexible",
+                "doesn't touch",
+                "not rubbing",
+                "no chafing"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_exposed",
+              "label": "No exposed wires or illegal tape",
+              "accept": [
+                "no exposed wires",
+                "no illegal taping",
+                "not taped"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "pins",
+              "label": "All seven pins present, not bent",
+              "accept": [
+                "seven pins",
+                "7 pins",
+                "all seven",
+                "not bent"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "air_lines",
+          "label": "Air Lines — Service & Emergency",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/09_combination/air_electrical_lines.png",
+          "script": "My service line is the blue hose and my emergency line is the red hose. They don't touch the tractor, trailer or catwalk, they're flexible, no cuts, no bubbles, no leaks. They're tight and secure to my tractor with the fittings and to my trailer with the glad hands, and the glad hand rubber seals are not worn.",
+          "concepts": [
+            {
+              "id": "colors",
+              "label": "Blue service, red emergency",
+              "accept": [
+                "blue",
+                "red",
+                "service line",
+                "emergency line"
+              ],
+              "required": true
+            },
+            {
+              "id": "flexible",
+              "label": "Flexible, not rubbing",
+              "accept": [
+                "flexible",
+                "doesn't touch",
+                "not rubbing"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_damage",
+              "label": "No cuts, bubbles or leaks",
+              "accept": [
+                "no cuts",
+                "no bubbles",
+                "no leaks"
+              ],
+              "required": true
+            },
+            {
+              "id": "gladhands",
+              "label": "Glad hands secure, seals not worn",
+              "accept": [
+                "glad hand",
+                "gladhands",
+                "rubber seal",
+                "not worn"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "fifth_wheel_skid",
+          "label": "Fifth Wheel Skid Plate",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/09_combination/fifth_wheel_skid_plate.png",
+          "script": "My fifth wheel skid plate is tight and secure to the platform, no cracks, not broken, no illegal welding, and properly greased. There is no space between the skid plate and the apron.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_illegal_welds",
+              "label": "No illegal welds",
+              "accept": [
+                "no illegal welding",
+                "no illegal welds",
+                "no welds",
+                "no illegal weldings"
+              ],
+              "required": true
+            },
+            {
+              "id": "greased",
+              "label": "Properly greased",
+              "accept": [
+                "greased",
+                "properly greased",
+                "fully greased",
+                "lubricated"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_gap",
+              "label": "No gap between skid plate and apron",
+              "accept": [
+                "no space",
+                "no gap",
+                "flush",
+                "no daylight"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "'No gap' is the safety-critical part — a visible gap means the trailer can separate.",
+          "common_errors": []
+        },
+        {
+          "id": "king_pin",
+          "label": "King Pin & Apron",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/09_combination/kingpin_apron.png",
+          "script": "My king pin is securely mounted, not bent or cracked, no illegal welding, and fully greased. My apron is securely mounted to the trailer, not cracked or broken, and has no illegal holes or welds.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_illegal_welds",
+              "label": "No illegal welds",
+              "accept": [
+                "no illegal welding",
+                "no illegal welds",
+                "no welds",
+                "no illegal weldings"
+              ],
+              "required": true
+            },
+            {
+              "id": "greased",
+              "label": "Properly greased",
+              "accept": [
+                "greased",
+                "properly greased",
+                "fully greased",
+                "lubricated"
+              ],
+              "required": true
+            },
+            {
+              "id": "apron",
+              "label": "Apron secure and sound",
+              "accept": [
+                "apron",
+                "securely mounted to the trailer"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "locking_jaws",
+          "label": "Locking Jaws",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/09_combination/locking_jaws.png",
+          "script": "My locking jaw is securely mounted, no cracks, no illegal welds, fully greased, and it's in the locked position all the way around the king pin.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_illegal_welds",
+              "label": "No illegal welds",
+              "accept": [
+                "no illegal welding",
+                "no illegal welds",
+                "no welds",
+                "no illegal weldings"
+              ],
+              "required": true
+            },
+            {
+              "id": "greased",
+              "label": "Properly greased",
+              "accept": [
+                "greased",
+                "properly greased",
+                "fully greased",
+                "lubricated"
+              ],
+              "required": true
+            },
+            {
+              "id": "locked",
+              "label": "Closed all the way around the king pin",
+              "accept": [
+                "locked position",
+                "all the way around",
+                "closed around",
+                "engaged"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "locking_pins",
+          "label": "Mounting Pins, Release Handle & Pivot Pins",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/09_combination/release_handle_pins.png",
+          "script": "My mounting pins are present, fully engaged and in the locked position. My release handle is not broken and is in the locked position all the way in. My pivot pins are present, not cracked or broken.",
+          "concepts": [
+            {
+              "id": "pins",
+              "label": "Mounting pins present and engaged",
+              "accept": [
+                "pins are present",
+                "fully engaged",
+                "locked position"
+              ],
+              "required": true
+            },
+            {
+              "id": "handle",
+              "label": "Release handle locked, not broken",
+              "accept": [
+                "release handle",
+                "not broken",
+                "all the way in"
+              ],
+              "required": true
+            },
+            {
+              "id": "pivot",
+              "label": "Pivot pins present, not cracked",
+              "accept": [
+                "pivot pins",
+                "not cracked",
+                "not broken"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "trailer_only",
+      "order": 10,
+      "title": "Trailer Only",
+      "checklist_category": "landing gear & clearance / reflective tape",
+      "book_pages": [
+        27
+      ],
+      "location": "trailer_side",
+      "applies_to": [
+        "class_a"
+      ],
+      "items": [
+        {
+          "id": "landing_gear",
+          "label": "Landing Gear",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/10_trailer_only/landing_gear.png",
+          "script": "My landing gear is fully raised, properly mounted, not broken, no illegal welding. The crank handle is present, not broken, secured in its holder, and it's operational.",
+          "concepts": [
+            {
+              "id": "raised",
+              "label": "Fully raised",
+              "accept": [
+                "raised",
+                "up",
+                "fully raised",
+                "cranked up"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_illegal_welds",
+              "label": "No illegal welds",
+              "accept": [
+                "no illegal welding",
+                "no illegal welds",
+                "no welds",
+                "no illegal weldings"
+              ],
+              "required": true
+            },
+            {
+              "id": "handle",
+              "label": "Crank handle present and secured",
+              "accept": [
+                "handle",
+                "crank",
+                "present",
+                "secured"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "trailer_clearance_lights",
+          "label": "Trailer Clearance Lights",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/11_rear_of_trailer/clearance_lights.png",
+          "script": "My trailer clearance lights are tight and secure, clean, not cracked, proper amber color on the front and red on the back.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "proper_color",
+              "label": "Proper color",
+              "accept": [
+                "proper color",
+                "correct color",
+                "amber",
+                "red",
+                "right color"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "dot_tape",
+          "label": "DOT Reflective Tape",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/10_trailer_only/dot_tape.png",
+          "script": "My DOT tape is present, properly fastened, not dirty, and covers at least fifty percent of the side of my trailer. Proper red and clear color.",
+          "concepts": [
+            {
+              "id": "present",
+              "label": "Present and fastened",
+              "accept": [
+                "present",
+                "properly fastened",
+                "attached"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "coverage",
+              "label": "At least 50% coverage",
+              "accept": [
+                "50",
+                "fifty percent",
+                "half"
+              ],
+              "required": true
+            },
+            {
+              "id": "color",
+              "label": "Red and white/clear",
+              "accept": [
+                "red",
+                "clear",
+                "white"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "rear_of_trailer",
+      "order": 11,
+      "title": "Rear of Trailer",
+      "checklist_category": "lenses & reflectors",
+      "book_pages": [
+        29
+      ],
+      "location": "trailer_rear",
+      "applies_to": [
+        "class_a"
+      ],
+      "items": [
+        {
+          "id": "rear_lenses",
+          "label": "Lenses & Reflectors",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/11_rear_of_trailer/lenses_reflectors.png",
+          "script": "My lenses and reflectors are not cracked, broken or loose, they're clean and the proper color. They function as turn signals, emergency lights, brake lights, markers and reflectors.",
+          "concepts": [
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "not_broken",
+              "label": "Not bent, broken or twisted",
+              "accept": [
+                "not broken",
+                "not bent",
+                "not twisted",
+                "no breaks",
+                "unbroken"
+              ],
+              "required": true
+            },
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "proper_color",
+              "label": "Proper color",
+              "accept": [
+                "proper color",
+                "correct color",
+                "amber",
+                "red",
+                "right color"
+              ],
+              "required": true
+            },
+            {
+              "id": "functions",
+              "label": "Names the functions",
+              "accept": [
+                "turn signal",
+                "brake light",
+                "emergency",
+                "marker",
+                "reflector"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "rear_clearance",
+          "label": "Clearance Lights",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/11_rear_of_trailer/clearance_lights.png",
+          "script": "My clearance lights are tight, secure, no cracks, proper color, clean and working.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "proper_color",
+              "label": "Proper color",
+              "accept": [
+                "proper color",
+                "correct color",
+                "amber",
+                "red",
+                "right color"
+              ],
+              "required": true
+            },
+            {
+              "id": "clean",
+              "label": "Clean",
+              "accept": [
+                "clean",
+                "not dirty"
+              ],
+              "required": true
+            },
+            {
+              "id": "operational",
+              "label": "Demonstrated working",
+              "accept": [
+                "works",
+                "working",
+                "operational",
+                "functions",
+                "operates"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        },
+        {
+          "id": "rear_lights",
+          "label": "Turn, Brake, Clearance & Flasher Lights",
+          "action": "name_point_explain",
+          "image": "assets/reference/curated/11_rear_of_trailer/lenses_reflectors.png",
+          "script": "My turn signals, brake lights, clearance lights and flasher lights are tight, secure, no cracks, proper color and working.",
+          "concepts": [
+            {
+              "id": "secure",
+              "label": "Tight and securely mounted",
+              "accept": [
+                "tight",
+                "secure",
+                "securely mounted",
+                "properly mounted",
+                "firmly mounted",
+                "not loose"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_cracks",
+              "label": "No cracks",
+              "accept": [
+                "no cracks",
+                "not cracked",
+                "no crack",
+                "uncracked"
+              ],
+              "required": true
+            },
+            {
+              "id": "proper_color",
+              "label": "Proper color",
+              "accept": [
+                "proper color",
+                "correct color",
+                "amber",
+                "red",
+                "right color"
+              ],
+              "required": true
+            },
+            {
+              "id": "operational",
+              "label": "Demonstrated working",
+              "accept": [
+                "works",
+                "working",
+                "operational",
+                "functions",
+                "operates"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": null,
+          "common_errors": []
+        }
+      ]
+    },
+    {
+      "id": "railroad_crossing",
+      "order": 12,
+      "title": "Railroad Crossing",
+      "checklist_category": "road test — railroad crossing",
+      "book_pages": [
+        30
+      ],
+      "location": "on_road",
+      "type": "procedure",
+      "items": [
+        {
+          "id": "rr_procedure",
+          "label": "Railroad Crossing Procedure",
+          "action": "narrate_procedure",
+          "image": "assets/reference/curated/12_railroad_crossing/crossing_sign.png",
+          "script": "At two hundred feet I turn my flashers on and check for traffic. I move forward between fifteen and fifty feet from the tracks. I stop, lower my window, look and listen for a train. I don't see or hear a train — it's safe. I have space on the other side to clear the tracks completely. I stay to my right. I move forward without changing gears. Once the trailer passes the tracks I turn my flashers off, check my traffic and accelerate.",
+          "concepts": [
+            {
+              "id": "flashers_on",
+              "label": "Flashers on at 200 ft",
+              "accept": [
+                "200 feet",
+                "two hundred feet",
+                "flashers on"
+              ],
+              "required": true
+            },
+            {
+              "id": "stop_distance",
+              "label": "Stops 15–50 ft from the tracks",
+              "accept": [
+                "15",
+                "50",
+                "fifteen",
+                "fifty",
+                "feet"
+              ],
+              "required": true
+            },
+            {
+              "id": "window",
+              "label": "Lowers window, looks and listens",
+              "accept": [
+                "window",
+                "lower my window",
+                "look",
+                "listen"
+              ],
+              "required": true
+            },
+            {
+              "id": "clear",
+              "label": "Has room to clear the far side",
+              "accept": [
+                "space",
+                "room",
+                "clear the tracks",
+                "other side"
+              ],
+              "required": true
+            },
+            {
+              "id": "no_shift",
+              "label": "No gear change on the tracks",
+              "accept": [
+                "without changing gear",
+                "no shifting",
+                "don't shift"
+              ],
+              "required": true
+            },
+            {
+              "id": "flashers_off",
+              "label": "Flashers off after clearing",
+              "accept": [
+                "flashers off",
+                "turn off my flashers"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "Never shift on the tracks. Never stop on the tracks. Both are instant fails.",
+          "common_errors": [
+            "Shifting gears while on the tracks",
+            "Stopping with any part of the rig on the tracks",
+            "Forgetting to turn the flashers back off"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emergency_stop",
+      "order": 13,
+      "title": "Emergency Stop",
+      "checklist_category": "road test — emergency stop",
+      "book_pages": [
+        31
+      ],
+      "location": "on_road",
+      "type": "procedure",
+      "items": [
+        {
+          "id": "emergency_procedure",
+          "label": "Emergency Stop Procedure",
+          "action": "narrate_procedure",
+          "image": "assets/reference/curated/13_emergency_stop/triangles_placed.png",
+          "script": "I will pull to the side of the road, put my brake valves up, put my truck in neutral, turn on my four-way flashers, and place my three reflective triangles. Then I check for traffic before I get back in and accelerate.",
+          "concepts": [
+            {
+              "id": "pull_over",
+              "label": "Pulls fully off the road",
+              "accept": [
+                "pull to the side",
+                "pull over",
+                "off the road",
+                "shoulder"
+              ],
+              "required": true
+            },
+            {
+              "id": "valves_up",
+              "label": "Brake valves up",
+              "accept": [
+                "valves up",
+                "set the brakes",
+                "parking brake"
+              ],
+              "required": true
+            },
+            {
+              "id": "neutral",
+              "label": "Transmission in neutral",
+              "accept": [
+                "neutral"
+              ],
+              "required": true
+            },
+            {
+              "id": "flashers",
+              "label": "Four-way flashers on",
+              "accept": [
+                "four way",
+                "4-way",
+                "flashers",
+                "hazards"
+              ],
+              "required": true
+            },
+            {
+              "id": "triangles",
+              "label": "Places three triangles",
+              "accept": [
+                "three triangles",
+                "3 triangles",
+                "reflective triangles",
+                "warning devices"
+              ],
+              "required": true
+            },
+            {
+              "id": "traffic",
+              "label": "Checks traffic before moving",
+              "accept": [
+                "check for traffic",
+                "check traffic"
+              ],
+              "required": true
+            }
+          ],
+          "auto_fail": false,
+          "demonstrate": null,
+          "coach_tip": "Triangle placement: 10 ft behind, 100 ft behind, and 100 ft ahead on a two-lane road.",
+          "common_errors": []
+        }
+      ]
+    }
+  ]
+}

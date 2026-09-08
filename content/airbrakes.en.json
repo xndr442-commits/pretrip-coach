@@ -1,0 +1,801 @@
+{
+  "schema_version": "1.0.0",
+  "content_version": "2026.09.08",
+  "id": "air_brake_test",
+  "title": "Air Brake Test",
+  "subtitle": "Ordered, timed, spoken procedure",
+  "publisher": "Fenix Truck School",
+  "source_documents": [
+    "AIR BRAKES TEST handout"
+  ],
+  "auto_fail": true,
+  "ordered": true,
+  "note": "Order is graded. A step performed out of sequence scores zero even if the words are right.",
+  "transmissions": [
+    "manual",
+    "automatic"
+  ],
+  "transmission_note": "Steps carrying `variants` differ by transmission. The student picks their test vehicle once; render variants[transmission] and grade against variant_must[transmission]. Steps without `variants` are identical for both.",
+  "variables": {
+    "leak_released": {
+      "class_a_combination": 3,
+      "class_b_straight": 2,
+      "_note": "CONFIRMED 2026-09-08: the Fenix AIR BRAKES TEST handout governs, for both FL and MA."
+    },
+    "leak_applied": {
+      "class_a_combination": 4,
+      "class_b_straight": 3
+    }
+  },
+  "precondition_vocabulary": {
+    "engine_on": "Engine running",
+    "engine_off": "Engine shut off",
+    "key_on": "Key in the ON position (electric on)",
+    "shifter_neutral": "Shifter in neutral",
+    "parking_brakes_set": "Parking brakes set (valves out)",
+    "valves_in": "Both air valves pushed IN",
+    "brakes_released": "Brakes released",
+    "brake_pedal_applied_90psi": "90 lbs of pressure held on the brake pedal",
+    "wheels_chocked": "Wheels chocked",
+    "full_air_pressure": "Air built to full pressure (120-140 psi)",
+    "both_brakes_released": "Both parking and trailer brakes released",
+    "_note": "The UI gates each phase on these. Getting the truck state wrong is the most common way students fail this test, so it is a mechanic, not a footnote. See BUILD_SPEC.md #7."
+  },
+  "phases": [
+    {
+      "id": "setup",
+      "preconditions": [
+        "engine_off",
+        "shifter_neutral",
+        "parking_brakes_set"
+      ],
+      "title": "Setup & Securement",
+      "order": 1,
+      "image": "assets/reference/curated/01_incab_engine_start/valves_up.png",
+      "steps": [
+        {
+          "id": "secure",
+          "kind": "do",
+          "say": "Check the brakes are set and the shifter is in neutral.",
+          "must": [
+            "brakes set",
+            "neutral"
+          ]
+        },
+        {
+          "id": "start_1",
+          "kind": "do",
+          "say": "Safely start the engine.",
+          "must": [
+            "start"
+          ]
+        },
+        {
+          "id": "first_gear",
+          "kind": "do",
+          "say": "Put the truck in first gear.",
+          "must": [
+            "first gear"
+          ]
+        },
+        {
+          "id": "shutdown",
+          "kind": "do",
+          "say": "Shut off the engine and take the key.",
+          "must": [
+            "shut off",
+            "take the key"
+          ]
+        },
+        {
+          "id": "chock",
+          "kind": "do",
+          "say": "Chock the wheels.",
+          "must": [
+            "chock"
+          ]
+        },
+        {
+          "id": "return",
+          "kind": "do",
+          "say": "Return to the truck maintaining three points of contact.",
+          "must": [
+            "three points of contact"
+          ],
+          "note": "Three points of contact is scored on the road test too — build the habit here."
+        },
+        {
+          "id": "safe_start",
+          "kind": "say",
+          "say": "\"I will safely start the engine: shifter in neutral, brakes set.\"",
+          "must": [
+            "safely start",
+            "neutral",
+            "brakes set"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cut_in_cut_out",
+      "preconditions": [
+        "engine_on",
+        "valves_in",
+        "wheels_chocked"
+      ],
+      "title": "Governor Cut-In and Cut-Out",
+      "order": 2,
+      "image": "assets/reference/curated/02_incab_brake_check/air_gauges.png",
+      "steps": [
+        {
+          "id": "release",
+          "kind": "do",
+          "say": "After the engine is on, release the parking brakes.",
+          "must": [
+            "release"
+          ]
+        },
+        {
+          "id": "build",
+          "kind": "say",
+          "say": "\"I will build the air to full pressure between 120 and 140 psi.\"",
+          "must": [
+            "120",
+            "140",
+            "full pressure"
+          ]
+        },
+        {
+          "id": "report_full",
+          "kind": "report",
+          "say": "\"I am at full pressure, ___ psi.\"",
+          "must": [
+            "psi"
+          ],
+          "reading": {
+            "type": "psi",
+            "min": 120,
+            "max": 140
+          }
+        },
+        {
+          "id": "fan_to_100",
+          "kind": "say",
+          "say": "\"I will fan down to 100 and then stay at idle to check the cut-in.\"",
+          "must": [
+            "fan down",
+            "100",
+            "cut in"
+          ]
+        },
+        {
+          "id": "cut_in",
+          "kind": "say",
+          "say": "\"Needle is rising — the cut-in works.\"",
+          "must": [
+            "needle is rising",
+            "cut in works"
+          ]
+        },
+        {
+          "id": "rpm",
+          "kind": "say",
+          "say": "\"I will raise the engine to between 1200 and 1400 rpm.\"",
+          "must": [
+            "1200",
+            "1400",
+            "rpm"
+          ]
+        },
+        {
+          "id": "build_again",
+          "kind": "say",
+          "say": "\"I will bring the air pressure up to 120 to 140 psi to check the cut-out.\"",
+          "must": [
+            "120",
+            "140",
+            "cut out"
+          ]
+        },
+        {
+          "id": "cut_out",
+          "kind": "report",
+          "say": "\"Needle stopped at ___ psi. Cut-out works.\"",
+          "must": [
+            "needle stopped",
+            "cut out works"
+          ],
+          "reading": {
+            "type": "psi",
+            "min": 120,
+            "max": 140
+          }
+        },
+        {
+          "id": "set_brakes",
+          "kind": "do",
+          "say": "Set the brakes.",
+          "must": [
+            "set the brakes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "air_loss_released",
+      "preconditions": [
+        "engine_off",
+        "key_on",
+        "brakes_released"
+      ],
+      "title": "Air Loss Rate — Brakes Released",
+      "order": 3,
+      "image": "assets/reference/curated/02_incab_brake_check/air_gauges.png",
+      "auto_fail": true,
+      "steps": [
+        {
+          "id": "engine_off",
+          "kind": "do",
+          "say": "Shut the engine off.",
+          "must": [
+            "shut the engine off"
+          ]
+        },
+        {
+          "id": "key_on",
+          "kind": "do",
+          "say": "Put the key in the ON position.",
+          "must": [
+            "key on"
+          ]
+        },
+        {
+          "id": "declare",
+          "kind": "say",
+          "say": "\"I will release the brakes. After an initial loss of about 5 to 15 pounds, I cannot lose more than {{leak_released}} pounds in 1 minute.\"",
+          "must": [
+            "release the brakes",
+            "initial loss",
+            "cannot lose more than",
+            "one minute"
+          ]
+        },
+        {
+          "id": "start_psi",
+          "kind": "report",
+          "say": "\"Starting at ___ psi.\"",
+          "must": [
+            "starting at"
+          ],
+          "reading": {
+            "type": "psi",
+            "min": 90,
+            "max": 140
+          }
+        },
+        {
+          "id": "release_do",
+          "kind": "do",
+          "say": "Release the brakes.",
+          "must": [
+            "release"
+          ]
+        },
+        {
+          "id": "initial",
+          "kind": "report",
+          "say": "\"Initial loss is ___ psi.\"",
+          "must": [
+            "initial loss"
+          ],
+          "reading": {
+            "type": "psi_delta",
+            "max": 15
+          },
+          "note": "If the initial loss is over 15 lbs, tell the examiner it's too much and ask if you may continue."
+        },
+        {
+          "id": "timer",
+          "kind": "timer",
+          "say": "Start timing 60 seconds.",
+          "must": [
+            "timing",
+            "60 seconds"
+          ],
+          "seconds": 60
+        },
+        {
+          "id": "result",
+          "kind": "report",
+          "say": "\"It's been one minute and air pressure is still ___ psi. No air leaks.\"",
+          "must": [
+            "one minute",
+            "no air leaks"
+          ],
+          "reading": {
+            "type": "psi_delta",
+            "max": "{{leak_released}}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "air_loss_applied",
+      "preconditions": [
+        "engine_off",
+        "key_on",
+        "brake_pedal_applied_90psi"
+      ],
+      "title": "Air Loss Rate — Brakes Applied",
+      "order": 4,
+      "image": "assets/reference/curated/02_incab_brake_check/service_brake_pedal.png",
+      "auto_fail": true,
+      "steps": [
+        {
+          "id": "apply",
+          "kind": "say",
+          "say": "\"I will put 90 pounds of pressure on the brake pedal.\"",
+          "must": [
+            "90 pounds",
+            "brake pedal"
+          ]
+        },
+        {
+          "id": "declare",
+          "kind": "say",
+          "say": "\"After another initial loss of about 5 to 15 pounds, I cannot lose more than {{leak_applied}} pounds in 1 minute.\"",
+          "must": [
+            "initial loss",
+            "cannot lose more than",
+            "one minute"
+          ]
+        },
+        {
+          "id": "start_psi",
+          "kind": "report",
+          "say": "\"Starting at ___ psi, initial loss was ___ pounds. Starting timing 60 seconds.\"",
+          "must": [
+            "starting at",
+            "initial loss",
+            "timing"
+          ],
+          "reading": {
+            "type": "psi",
+            "min": 80,
+            "max": 140
+          }
+        },
+        {
+          "id": "timer",
+          "kind": "timer",
+          "say": "Time a full 60 seconds.",
+          "must": [
+            "60 seconds"
+          ],
+          "seconds": 60
+        },
+        {
+          "id": "result",
+          "kind": "report",
+          "say": "\"It's been one minute and I have no air loss — still ___ psi.\"",
+          "must": [
+            "one minute",
+            "no air loss"
+          ],
+          "reading": {
+            "type": "psi_delta",
+            "max": "{{leak_applied}}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "low_air_warning",
+      "preconditions": [
+        "engine_off",
+        "key_on",
+        "valves_in"
+      ],
+      "title": "Low Air Warning Alarm",
+      "order": 5,
+      "image": "assets/reference/curated/02_incab_brake_check/low_air_warning.png",
+      "auto_fail": true,
+      "steps": [
+        {
+          "id": "fan",
+          "kind": "say",
+          "say": "\"I will fan the brakes.\"",
+          "must": [
+            "fan the brakes"
+          ]
+        },
+        {
+          "id": "declare",
+          "kind": "say",
+          "say": "\"The low air warning alarm must come on at or above 55 psi.\"",
+          "must": [
+            "low air warning",
+            "55"
+          ]
+        },
+        {
+          "id": "report",
+          "kind": "report",
+          "say": "\"It came on at ___ psi.\"",
+          "must": [
+            "it came on at"
+          ],
+          "reading": {
+            "type": "psi",
+            "min": 55,
+            "max": 90
+          }
+        },
+        {
+          "id": "confirm",
+          "kind": "say",
+          "say": "\"My low air warning alarm works.\"",
+          "must": [
+            "alarm works"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spring_brakes",
+      "preconditions": [
+        "engine_off",
+        "key_on",
+        "valves_in"
+      ],
+      "title": "Spring Brakes",
+      "order": 6,
+      "image": "assets/reference/curated/02_incab_brake_check/valves_popped_out.png",
+      "auto_fail": true,
+      "steps": [
+        {
+          "id": "continue",
+          "kind": "say",
+          "say": "\"I will continue fanning the brakes.\"",
+          "must": [
+            "continue fanning"
+          ]
+        },
+        {
+          "id": "declare",
+          "kind": "say",
+          "say": "\"Between 45 and 20 psi the spring brakes must apply. I will know it because both buttons will pop out.\"",
+          "must": [
+            "45",
+            "20",
+            "both buttons",
+            "pop out"
+          ]
+        },
+        {
+          "id": "report",
+          "kind": "report",
+          "say": "\"They came on at ___ psi.\"",
+          "must": [
+            "they came on at"
+          ],
+          "reading": {
+            "type": "psi",
+            "min": 20,
+            "max": 45
+          },
+          "note": "If only one button pops, keep fanning until the second pops too."
+        },
+        {
+          "id": "confirm",
+          "kind": "say",
+          "say": "\"My spring brakes work.\"",
+          "must": [
+            "spring brakes work"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rate_of_buildup",
+      "preconditions": [
+        "engine_on",
+        "shifter_neutral",
+        "parking_brakes_set"
+      ],
+      "title": "Rate of Air Build-Up",
+      "order": 7,
+      "image": "assets/reference/curated/02_incab_brake_check/air_gauges.png",
+      "steps": [
+        {
+          "id": "state",
+          "kind": "say",
+          "say": "\"Parking brakes are on, shifter in neutral. I will safely start the engine.\"",
+          "must": [
+            "parking brakes",
+            "neutral",
+            "safely start"
+          ]
+        },
+        {
+          "id": "rebuild",
+          "kind": "say",
+          "say": "\"Rebuild air maintaining 1500 rpm.\"",
+          "must": [
+            "1500",
+            "rpm"
+          ]
+        },
+        {
+          "id": "alarm_check",
+          "kind": "say",
+          "say": "\"First, I need to make sure the low air warning alarm shuts off at or above 55 psi.\"",
+          "must": [
+            "shuts off",
+            "55"
+          ]
+        },
+        {
+          "id": "declare",
+          "kind": "say",
+          "say": "\"I will time it from 85 to 100 psi, at idle, and it must take 45 seconds or less.\"",
+          "must": [
+            "85",
+            "100",
+            "45 seconds"
+          ]
+        },
+        {
+          "id": "alarm_off",
+          "kind": "say",
+          "say": "\"My alarm shut off above 55.\"",
+          "must": [
+            "shut off",
+            "55"
+          ]
+        },
+        {
+          "id": "to_idle",
+          "kind": "say",
+          "say": "\"I am at 75 psi; I will bring it to idle.\"",
+          "must": [
+            "75",
+            "idle"
+          ]
+        },
+        {
+          "id": "timing",
+          "kind": "timer",
+          "say": "\"I am at 85 and timing now.\"",
+          "must": [
+            "85",
+            "timing"
+          ],
+          "seconds": 45
+        },
+        {
+          "id": "result",
+          "kind": "report",
+          "say": "\"I am at 100 psi and it took ___ seconds.\"",
+          "must": [
+            "100",
+            "it took",
+            "seconds"
+          ],
+          "reading": {
+            "type": "seconds",
+            "max": 45
+          }
+        },
+        {
+          "id": "full",
+          "kind": "say",
+          "say": "\"Now I will build up to full pressure.\"",
+          "must": [
+            "full pressure"
+          ]
+        },
+        {
+          "id": "secure",
+          "kind": "say",
+          "say": "\"I will secure my truck and remove the chocks.\" Check brakes are set, put it in first gear, shut off the engine, take the key, remove the chock blocks and return to the truck.",
+          "must": [
+            "secure",
+            "remove the chocks",
+            "first gear",
+            "take the key"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test_brakes",
+      "preconditions": [
+        "engine_on",
+        "shifter_neutral",
+        "full_air_pressure"
+      ],
+      "title": "Brake Hold Tests",
+      "order": 8,
+      "image": "assets/reference/curated/02_incab_brake_check/valves_popped_out.png",
+      "auto_fail": true,
+      "steps": [
+        {
+          "id": "safe_start",
+          "kind": "say",
+          "say": "\"I am going to safe-start the engine: parking brakes are on, shifter is in neutral.\"",
+          "must": [
+            "parking brakes",
+            "neutral"
+          ]
+        },
+        {
+          "id": "trailer_declare",
+          "kind": "say",
+          "say": "\"First, I am going to test the trailer parking brake. I will release the tractor parking brake. In first gear I will let up on the clutch just until it starts to grab.\"",
+          "must": [
+            "trailer parking brake",
+            "release the tractor",
+            "first gear",
+            "clutch"
+          ],
+          "variants": {
+            "manual": "\"First, I am going to test the trailer parking brake. I will release the tractor parking brake. In first gear I will let up on the clutch just until it starts to grab.\"",
+            "automatic": "\"First, I am going to test the trailer parking brake. I will release the tractor parking brake. In drive I will gently apply throttle and try to move forward.\""
+          },
+          "variant_must": {
+            "manual": [
+              "trailer parking brake",
+              "release the tractor",
+              "first gear",
+              "clutch"
+            ],
+            "automatic": [
+              "trailer parking brake",
+              "release the tractor",
+              "drive",
+              "try to move"
+            ]
+          }
+        },
+        {
+          "id": "trailer_result",
+          "kind": "say",
+          "say": "\"Truck did not move — trailer brakes work. Trailer stayed connected and the fifth wheel is secure.\"",
+          "must": [
+            "did not move",
+            "trailer brakes work",
+            "fifth wheel"
+          ]
+        },
+        {
+          "id": "tractor_declare",
+          "kind": "say",
+          "say": "\"Now I will test the tractor parking brake. I will reapply the tractor brake and release the trailer parking brake. In first gear I will let up on the clutch just until it starts to grab.\"",
+          "must": [
+            "tractor parking brake",
+            "reapply",
+            "release the trailer",
+            "clutch"
+          ],
+          "variants": {
+            "manual": "\"Now I will test the tractor parking brake. I will reapply the tractor brake and release the trailer parking brake. In first gear I will let up on the clutch just until it starts to grab.\"",
+            "automatic": "\"Now I will test the tractor parking brake. I will reapply the tractor brake and release the trailer parking brake. In drive I will gently apply throttle and try to move forward.\""
+          },
+          "variant_must": {
+            "manual": [
+              "tractor parking brake",
+              "reapply",
+              "release the trailer",
+              "clutch"
+            ],
+            "automatic": [
+              "tractor parking brake",
+              "reapply",
+              "release the trailer",
+              "drive",
+              "try to move"
+            ]
+          }
+        },
+        {
+          "id": "tractor_result",
+          "kind": "say",
+          "say": "\"Truck did not move — tractor brakes work.\"",
+          "must": [
+            "did not move",
+            "tractor brakes work"
+          ]
+        },
+        {
+          "id": "rebuild",
+          "kind": "say",
+          "say": "\"Now I will rebuild the air back to full pressure.\"",
+          "must": [
+            "rebuild",
+            "full pressure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trolley_service",
+      "preconditions": [
+        "engine_on",
+        "both_brakes_released",
+        "full_air_pressure"
+      ],
+      "title": "Trolley Brake & Service Brake",
+      "order": 9,
+      "image": "assets/reference/curated/02_incab_brake_check/service_brake_pedal.png",
+      "steps": [
+        {
+          "id": "trolley_declare",
+          "kind": "say",
+          "say": "\"Now I am going to test the trolley brake. I will release both parking brakes, pull forward at 5 miles per hour and pull down on the trolley brake.\"",
+          "must": [
+            "trolley brake",
+            "release both",
+            "5 miles per hour"
+          ]
+        },
+        {
+          "id": "trolley_result",
+          "kind": "say",
+          "say": "\"Truck stopped — trolley brake works.\"",
+          "must": [
+            "truck stopped",
+            "trolley brake works"
+          ]
+        },
+        {
+          "id": "service_declare",
+          "kind": "say",
+          "say": "\"Now I am going to test the service brake. I will pull forward at 5 miles per hour and test the service brake.\"",
+          "must": [
+            "service brake",
+            "5 miles per hour"
+          ]
+        },
+        {
+          "id": "service_result",
+          "kind": "say",
+          "say": "\"Truck stopped — service brake works.\"",
+          "must": [
+            "truck stopped",
+            "service brake works"
+          ]
+        },
+        {
+          "id": "quality",
+          "kind": "say",
+          "say": "No unusual feel to the pedal. No delay in stopping. Truck did not pull left or right. No chatter to the wheel. No unusual sounds or smells.",
+          "must": [
+            "no unusual feel",
+            "no delay",
+            "did not pull",
+            "no chatter",
+            "no unusual sounds"
+          ]
+        },
+        {
+          "id": "secure",
+          "kind": "do",
+          "say": "Take out of gear. Set the brakes.",
+          "must": [
+            "out of gear",
+            "set the brakes"
+          ]
+        },
+        {
+          "id": "done",
+          "kind": "say",
+          "say": "\"That completes my air-brake test!\"",
+          "must": [
+            "completes my air brake test"
+          ]
+        }
+      ]
+    }
+  ]
+}

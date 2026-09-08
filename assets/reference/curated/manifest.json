@@ -1,0 +1,1154 @@
+{
+  "generated_from": "Fenix pre-trip booklet, 36pp",
+  "count": 59,
+  "images": [
+    {
+      "id": "brand/cover_student_tire_inspection",
+      "file": "assets/reference/curated/00_brand/cover_student_tire_inspection.png",
+      "section": "00_brand",
+      "caption": "Student inspecting a steer tire (booklet cover)",
+      "width": 1452,
+      "height": 991,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        1
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.355,
+        "y": 0.6,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "brand/cover_driver_in_cab",
+      "file": "assets/reference/curated/00_brand/cover_driver_in_cab.png",
+      "section": "00_brand",
+      "caption": "Driver at the wheel (booklet cover)",
+      "width": 1451,
+      "height": 991,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        1
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.664,
+        "y": 0.364,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "brand/ceo_signature",
+      "file": "assets/reference/curated/00_brand/ceo_signature.png",
+      "section": "00_brand",
+      "caption": "CEO signature mark",
+      "width": 356,
+      "height": 474,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        4
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_engine_start/seatbelt",
+      "file": "assets/reference/curated/01_incab_engine_start/seatbelt.png",
+      "section": "01_incab_engine_start",
+      "caption": "Seat belt latched \u2014 top and bottom, no cuts or fraying",
+      "width": 390,
+      "height": 390,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        7,
+        10
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_engine_start/valves_up",
+      "file": "assets/reference/curated/01_incab_engine_start/valves_up.png",
+      "section": "01_incab_engine_start",
+      "caption": "Yellow parking-brake and red trailer-air-supply valves, pulled up",
+      "width": 397,
+      "height": 398,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        16,
+        17,
+        20,
+        21,
+        27
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_engine_start/gearshift_neutral",
+      "file": "assets/reference/curated/01_incab_engine_start/gearshift_neutral.png",
+      "section": "01_incab_engine_start",
+      "caption": "Gear shift lever in neutral",
+      "width": 403,
+      "height": 402,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        7
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_engine_start/ignition_key",
+      "file": "assets/reference/curated/01_incab_engine_start/ignition_key.png",
+      "section": "01_incab_engine_start",
+      "caption": "Hand turning the key to the ON position",
+      "width": 410,
+      "height": 410,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        7,
+        10
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_brake_check/air_gauges",
+      "file": "assets/reference/curated/02_incab_brake_check/air_gauges.png",
+      "section": "02_incab_brake_check",
+      "caption": "Dual air pressure gauges (primary + secondary)",
+      "width": 226,
+      "height": 225,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        8,
+        17,
+        20,
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_brake_check/low_air_warning",
+      "file": "assets/reference/curated/02_incab_brake_check/low_air_warning.png",
+      "section": "02_incab_brake_check",
+      "caption": "Dash cluster with low-air warning light illuminated",
+      "width": 399,
+      "height": 400,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        8,
+        17,
+        20,
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_brake_check/valves_popped_out",
+      "file": "assets/reference/curated/02_incab_brake_check/valves_popped_out.png",
+      "section": "02_incab_brake_check",
+      "caption": "Yellow and red valves popped OUT (spring brakes applied)",
+      "width": 413,
+      "height": 413,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        8,
+        9,
+        11,
+        27
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_brake_check/service_brake_pedal",
+      "file": "assets/reference/curated/02_incab_brake_check/service_brake_pedal.png",
+      "section": "02_incab_brake_check",
+      "caption": "Foot on the service brake pedal",
+      "width": 395,
+      "height": 395,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        9,
+        11,
+        27
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_equipment/reflective_triangles",
+      "file": "assets/reference/curated/03_incab_equipment/reflective_triangles.png",
+      "section": "03_incab_equipment",
+      "caption": "Reflective warning triangle deployed",
+      "width": 403,
+      "height": 402,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        10
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_equipment/fire_extinguisher",
+      "file": "assets/reference/curated/03_incab_equipment/fire_extinguisher.png",
+      "section": "03_incab_equipment",
+      "caption": "Fire extinguisher, mounted, charged, pin present",
+      "width": 397,
+      "height": 397,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        10
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_equipment/spare_fuses",
+      "file": "assets/reference/curated/03_incab_equipment/spare_fuses.png",
+      "section": "03_incab_equipment",
+      "caption": "Spare fuse and relay box",
+      "width": 420,
+      "height": 420,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        10
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_visibility/windshield",
+      "file": "assets/reference/curated/04_incab_visibility/windshield.png",
+      "section": "04_incab_visibility",
+      "caption": "Windshield viewed from the driver's seat",
+      "width": 417,
+      "height": 417,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        11
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.501,
+        "y": 0.504,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "incab_visibility/mirrors",
+      "file": "assets/reference/curated/04_incab_visibility/mirrors.png",
+      "section": "04_incab_visibility",
+      "caption": "Driver-side mirror assembly",
+      "width": 402,
+      "height": 399,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        11
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.407,
+        "y": 0.467,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "incab_visibility/wipers_blade",
+      "file": "assets/reference/curated/04_incab_visibility/wipers_blade.png",
+      "section": "04_incab_visibility",
+      "caption": "Wiper blade resting on the windshield",
+      "width": 396,
+      "height": 396,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        11
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_visibility/wipers_operating",
+      "file": "assets/reference/curated/04_incab_visibility/wipers_operating.png",
+      "section": "04_incab_visibility",
+      "caption": "Wipers sweeping the windshield",
+      "width": 421,
+      "height": 419,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        11
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_visibility/heater_defroster",
+      "file": "assets/reference/curated/04_incab_visibility/heater_defroster.png",
+      "section": "04_incab_visibility",
+      "caption": "Heater / defroster control panel",
+      "width": 402,
+      "height": 402,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        11
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_visibility/washer_fluid_spray",
+      "file": "assets/reference/curated/04_incab_visibility/washer_fluid_spray.png",
+      "section": "04_incab_visibility",
+      "caption": "Washer fluid spraying, wipers clearing",
+      "width": 399,
+      "height": 399,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        11
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "incab_visibility/horn",
+      "file": "assets/reference/curated/04_incab_visibility/horn.png",
+      "section": "04_incab_visibility",
+      "caption": "Steering wheel \u2014 city horn",
+      "width": 399,
+      "height": 398,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        11
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "lights_operations/tractor_studio",
+      "file": "assets/reference/curated/05_lights_operations/tractor_studio.png",
+      "section": "05_lights_operations",
+      "caption": "Day-cab tractor, three-quarter studio view",
+      "width": 1001,
+      "height": 1001,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        15
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "lights_operations/trailer_rear_doors",
+      "file": "assets/reference/curated/05_lights_operations/trailer_rear_doors.png",
+      "section": "05_lights_operations",
+      "caption": "Trailer rear doors, studio view",
+      "width": 176,
+      "height": 176,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        16
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "lights_operations/trailer_front_reefer",
+      "file": "assets/reference/curated/05_lights_operations/trailer_front_reefer.png",
+      "section": "05_lights_operations",
+      "caption": "Trailer nose / reefer unit",
+      "width": 390,
+      "height": 349,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        16
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "lights_operations/trailer_side_id",
+      "file": "assets/reference/curated/05_lights_operations/trailer_side_id.png",
+      "section": "05_lights_operations",
+      "caption": "Trailer side with unit number",
+      "width": 202,
+      "height": 202,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        16
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "lights_operations/trailer_rear_lit",
+      "file": "assets/reference/curated/05_lights_operations/trailer_rear_lit.png",
+      "section": "05_lights_operations",
+      "caption": "Trailer rear with all lights illuminated",
+      "width": 304,
+      "height": 303,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        16
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "lights_operations/marker_light_amber",
+      "file": "assets/reference/curated/05_lights_operations/marker_light_amber.png",
+      "section": "05_lights_operations",
+      "caption": "Amber side marker light strip",
+      "width": 399,
+      "height": 400,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        16
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.542,
+        "y": 0.445,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "lights_operations/marker_light_amber_alt",
+      "file": "assets/reference/curated/05_lights_operations/marker_light_amber_alt.png",
+      "section": "05_lights_operations",
+      "caption": "Amber side marker light strip (alt angle)",
+      "width": 383,
+      "height": 383,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        16
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.559,
+        "y": 0.41,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "front_operations/coolant_reservoir",
+      "file": "assets/reference/curated/06_front_operations/coolant_reservoir.png",
+      "section": "06_front_operations",
+      "caption": "Coolant reservoir and sight glass",
+      "width": 390,
+      "height": 389,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        17,
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.551,
+        "y": 0.431,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "front_operations/power_steering_reservoir",
+      "file": "assets/reference/curated/06_front_operations/power_steering_reservoir.png",
+      "section": "06_front_operations",
+      "caption": "Power steering reservoir",
+      "width": 400,
+      "height": 399,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        17,
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.491,
+        "y": 0.481,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "front_operations/engine_hoses",
+      "file": "assets/reference/curated/06_front_operations/engine_hoses.png",
+      "section": "06_front_operations",
+      "caption": "Engine compartment hoses \u2014 checking for cuts, bubbles, leaks",
+      "width": 400,
+      "height": 399,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        17
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.631,
+        "y": 0.839,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "front_operations/engine_fluids_wide",
+      "file": "assets/reference/curated/06_front_operations/engine_fluids_wide.png",
+      "section": "06_front_operations",
+      "caption": "Engine compartment, fluid reservoirs, wide view",
+      "width": 413,
+      "height": 412,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        17,
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.505,
+        "y": 0.434,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "front_operations/steering_gearbox",
+      "file": "assets/reference/curated/06_front_operations/steering_gearbox.png",
+      "section": "06_front_operations",
+      "caption": "Steering gear box and pitman arm",
+      "width": 391,
+      "height": 390,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        18
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.504,
+        "y": 0.492,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "steering_axle/front_tire",
+      "file": "assets/reference/curated/07_steering_axle/front_tire.png",
+      "section": "07_steering_axle",
+      "caption": "Steer tire tread and sidewall",
+      "width": 388,
+      "height": 389,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        20
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.477,
+        "y": 0.477,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "steering_axle/rim_lugnuts",
+      "file": "assets/reference/curated/07_steering_axle/rim_lugnuts.png",
+      "section": "07_steering_axle",
+      "caption": "Steer wheel rim, hub and lug nuts",
+      "width": 399,
+      "height": 399,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        20
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.612,
+        "y": 0.381,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "steering_axle/spring_mount",
+      "file": "assets/reference/curated/07_steering_axle/spring_mount.png",
+      "section": "07_steering_axle",
+      "caption": "Spring mount / hanger at the frame",
+      "width": 375,
+      "height": 374,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        20
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.519,
+        "y": 0.485,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "steering_axle/leaf_springs",
+      "file": "assets/reference/curated/07_steering_axle/leaf_springs.png",
+      "section": "07_steering_axle",
+      "caption": "Leaf spring pack",
+      "width": 394,
+      "height": 394,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        20
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "steering_axle/ubolts_shock",
+      "file": "assets/reference/curated/07_steering_axle/ubolts_shock.png",
+      "section": "07_steering_axle",
+      "caption": "U-bolts (4) and shock absorber (3)",
+      "width": 393,
+      "height": 393,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        20
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.519,
+        "y": 0.602,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "steering_axle/air_brake_hose",
+      "file": "assets/reference/curated/07_steering_axle/air_brake_hose.png",
+      "section": "07_steering_axle",
+      "caption": "Air brake hose with fittings at both ends",
+      "width": 399,
+      "height": 400,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.499,
+        "y": 0.498,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "steering_axle/brake_drum_shoes",
+      "file": "assets/reference/curated/07_steering_axle/brake_drum_shoes.png",
+      "section": "07_steering_axle",
+      "caption": "Brake drum, shoes and lining \u2014 checking for contaminants",
+      "width": 413,
+      "height": 412,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.493,
+        "y": 0.519,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "steering_axle/air_chamber",
+      "file": "assets/reference/curated/07_steering_axle/air_chamber.png",
+      "section": "07_steering_axle",
+      "caption": "Air chamber and clamps",
+      "width": 391,
+      "height": 391,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        21
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.489,
+        "y": 0.603,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "side_of_vehicle/frame",
+      "file": "assets/reference/curated/08_side_of_vehicle/frame.png",
+      "section": "08_side_of_vehicle",
+      "caption": "Frame rail",
+      "width": 163,
+      "height": 157,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        23
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "side_of_vehicle/tractor_side_a",
+      "file": "assets/reference/curated/08_side_of_vehicle/tractor_side_a.png",
+      "section": "08_side_of_vehicle",
+      "caption": "Tractor side \u2014 turn signal and mirror",
+      "width": 394,
+      "height": 394,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        23,
+        25
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "side_of_vehicle/tractor_side_b",
+      "file": "assets/reference/curated/08_side_of_vehicle/tractor_side_b.png",
+      "section": "08_side_of_vehicle",
+      "caption": "Tractor side view (alt)",
+      "width": 388,
+      "height": 388,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        23
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "side_of_vehicle/battery_box",
+      "file": "assets/reference/curated/08_side_of_vehicle/battery_box.png",
+      "section": "08_side_of_vehicle",
+      "caption": "Battery box, cover open, connectors and cables",
+      "width": 397,
+      "height": 398,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        23
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "side_of_vehicle/fuel_def_tank",
+      "file": "assets/reference/curated/08_side_of_vehicle/fuel_def_tank.png",
+      "section": "08_side_of_vehicle",
+      "caption": "Fuel tank cap / DEF tank",
+      "width": 389,
+      "height": 389,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        23
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "side_of_vehicle/tractor_side_c",
+      "file": "assets/reference/curated/08_side_of_vehicle/tractor_side_c.png",
+      "section": "08_side_of_vehicle",
+      "caption": "Tractor side view (alt 2)",
+      "width": 404,
+      "height": 404,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        23
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "side_of_vehicle/battery_box_steps",
+      "file": "assets/reference/curated/08_side_of_vehicle/battery_box_steps.png",
+      "section": "08_side_of_vehicle",
+      "caption": "Battery box beneath the catwalk steps",
+      "width": 414,
+      "height": 414,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        23
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "combination/air_electrical_lines",
+      "file": "assets/reference/curated/09_combination/air_electrical_lines.png",
+      "section": "09_combination",
+      "caption": "Electrical (green) line and service/emergency air lines at the catwalk",
+      "width": 394,
+      "height": 394,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        25
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.555,
+        "y": 0.446,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "combination/kingpin_apron",
+      "file": "assets/reference/curated/09_combination/kingpin_apron.png",
+      "section": "09_combination",
+      "caption": "King pin and apron, viewed from underneath",
+      "width": 242,
+      "height": 242,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        25
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "combination/fifth_wheel_skid_plate",
+      "file": "assets/reference/curated/09_combination/fifth_wheel_skid_plate.png",
+      "section": "09_combination",
+      "caption": "Fifth wheel skid plate, greased",
+      "width": 422,
+      "height": 423,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        25
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.504,
+        "y": 0.495,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "combination/release_handle_pins",
+      "file": "assets/reference/curated/09_combination/release_handle_pins.png",
+      "section": "09_combination",
+      "caption": "Fifth wheel release handle and mounting pins",
+      "width": 384,
+      "height": 384,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        25
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.505,
+        "y": 0.53,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "combination/locking_jaws",
+      "file": "assets/reference/curated/09_combination/locking_jaws.png",
+      "section": "09_combination",
+      "caption": "Locking jaws closed around the king pin",
+      "width": 337,
+      "height": 337,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        25
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "trailer_only/landing_gear",
+      "file": "assets/reference/curated/10_trailer_only/landing_gear.png",
+      "section": "10_trailer_only",
+      "caption": "Landing gear raised, crank handle secured",
+      "width": 412,
+      "height": 412,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        27
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "trailer_only/dot_tape",
+      "file": "assets/reference/curated/10_trailer_only/dot_tape.png",
+      "section": "10_trailer_only",
+      "caption": "DOT conspicuity tape along the trailer side",
+      "width": 336,
+      "height": 336,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        27
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "rear_of_trailer/clearance_lights",
+      "file": "assets/reference/curated/11_rear_of_trailer/clearance_lights.png",
+      "section": "11_rear_of_trailer",
+      "caption": "Trailer rear clearance lights",
+      "width": 412,
+      "height": 412,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        29
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "rear_of_trailer/lenses_reflectors",
+      "file": "assets/reference/curated/11_rear_of_trailer/lenses_reflectors.png",
+      "section": "11_rear_of_trailer",
+      "caption": "Tail, brake and turn lenses illuminated",
+      "width": 412,
+      "height": 412,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        29
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.483,
+        "y": 0.46,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    },
+    {
+      "id": "railroad_crossing/crossing_sign",
+      "file": "assets/reference/curated/12_railroad_crossing/crossing_sign.png",
+      "section": "12_railroad_crossing",
+      "caption": "Railroad crossing \u2014 crossbuck, signals, 2 TRACKS sign",
+      "width": 400,
+      "height": 400,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        31
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.5,
+        "r": 0.2
+      },
+      "hotspot_source": "default_center"
+    },
+    {
+      "id": "emergency_stop/triangles_placed",
+      "file": "assets/reference/curated/13_emergency_stop/triangles_placed.png",
+      "section": "13_emergency_stop",
+      "caption": "Warning triangles placed behind a stopped rig",
+      "width": 429,
+      "height": 430,
+      "source": "NEW MATERIAL PRE TRIP.pdf",
+      "source_pages": [
+        33
+      ],
+      "rights": "Fenix Truck School \u2014 owned material, cleared for in-app use",
+      "hotspot": {
+        "x": 0.626,
+        "y": 0.408,
+        "r": 0.13
+      },
+      "hotspot_source": "arrow_detected"
+    }
+  ],
+  "hotspot_note": "x/y/r are normalised 0-1 of image width/height; r is a fraction of the smaller dimension. 'arrow_detected' came from the booklet's own pointer arrow and is reliable. 'default_center' is a placeholder \u2014 refine those by hand before release."
+}

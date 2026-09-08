@@ -1,0 +1,374 @@
+{
+  "language": "es",
+  "schema_version": "1.0.0",
+  "for_content_version": "2026.09.08",
+  "ui": {
+    "app_name": "Pre-Trip Coach",
+    "mode_learn": "Aprender",
+    "mode_practice": "Practicar",
+    "mode_test": "Examen",
+    "mode_drill": "Repaso Rápido",
+    "start": "Comenzar",
+    "next": "Siguiente",
+    "repeat": "Repetir",
+    "hint": "Pista",
+    "skip": "Saltar",
+    "finish": "Terminar",
+    "score": "Puntaje",
+    "passed": "APROBADO",
+    "failed": "REPROBADO",
+    "auto_fail": "FALLA AUTOMÁTICA",
+    "listening": "Escuchando…",
+    "tap_to_speak": "Toca para hablar",
+    "you_said": "Dijiste",
+    "you_missed": "Te faltó",
+    "great": "¡Muy bien!",
+    "almost": "Casi",
+    "try_again": "Intenta de nuevo",
+    "streak": "Racha",
+    "xp": "XP",
+    "level": "Nivel",
+    "section_complete": "Sección completa",
+    "time_remaining": "Tiempo restante",
+    "review_mistakes": "Repasar errores",
+    "ask_instructor": "Pregúntale al instructor",
+    "settings": "Ajustes",
+    "language": "Idioma",
+    "vehicle_class": "Clase de vehículo",
+    "offline_ready": "Listo sin conexión"
+  },
+  "defect_vocabulary": {
+    "secure": [
+      "apretado",
+      "seguro",
+      "bien montado",
+      "firmemente montado",
+      "no está flojo",
+      "fijo"
+    ],
+    "no_cracks": [
+      "sin grietas",
+      "no está agrietado",
+      "sin fisuras",
+      "sin rajaduras"
+    ],
+    "not_broken": [
+      "no está roto",
+      "no está doblado",
+      "no está torcido",
+      "sin roturas"
+    ],
+    "no_leaks": [
+      "sin fugas",
+      "no tiene fugas",
+      "sin pérdidas de aire",
+      "no gotea"
+    ],
+    "no_illegal_welds": [
+      "sin soldaduras ilegales",
+      "sin soldaduras"
+    ],
+    "clean": [
+      "limpio",
+      "limpia",
+      "no está sucio"
+    ],
+    "proper_color": [
+      "color correcto",
+      "color adecuado",
+      "ámbar",
+      "rojo"
+    ],
+    "hardware": [
+      "todos los pernos presentes",
+      "no falta nada",
+      "toda la tornillería",
+      "sin tornillos faltantes"
+    ],
+    "greased": [
+      "engrasado",
+      "bien engrasado",
+      "lubricado"
+    ],
+    "operational": [
+      "funciona",
+      "funcionando",
+      "operativo",
+      "opera"
+    ]
+  },
+  "sections": {
+    "in_cab_engine_start": "Cabina / Arranque del Motor",
+    "in_cab_brake_check": "Prueba de Frenos de Aire en Cabina",
+    "in_cab_equipment": "Indicadores y Equipo de Emergencia",
+    "in_cab_visibility": "Parabrisas, Espejos, Limpiaparabrisas, Calefacción y Bocinas",
+    "lights_operations": "Verificación de Luces",
+    "front_operations": "Frente del Vehículo / Área del Motor",
+    "steering_axle": "Eje de Dirección",
+    "side_of_vehicle": "Lateral del Vehículo",
+    "combination_vehicle": "Solo Vehículos Combinados",
+    "trailer_only": "Solo Remolque",
+    "rear_of_trailer": "Parte Trasera del Remolque",
+    "railroad_crossing": "Cruce de Ferrocarril",
+    "emergency_stop": "Parada de Emergencia"
+  },
+  "items": {
+    "seat_belt": {
+      "label": "Cinturón de Seguridad",
+      "script": "Mi cinturón de seguridad está apretado y seguro arriba y abajo, sin cortes, sin deshilachado, y abrocha y suelta correctamente."
+    },
+    "valves_up": {
+      "label": "Válvulas de Aire — Aplicadas",
+      "script": "Las dos válvulas de aire están activadas en la posición hacia arriba — la válvula amarilla del freno de estacionamiento y la válvula roja del suministro de aire del remolque están afuera."
+    },
+    "gearshift_neutral": {
+      "label": "Palanca de Cambios",
+      "script": "Mi palanca de cambios está en neutral."
+    },
+    "safe_start": {
+      "label": "Arranque Seguro",
+      "script": "Voy a arrancar el motor de forma segura: los frenos están puestos, la palanca en neutral. Llave en posición de encendido — verifico que las luces de ABS y DEF se enciendan y se apaguen — y arranco el motor."
+    },
+    "air_compressor_governor": {
+      "label": "Compresor de Aire — Corte del Gobernador",
+      "script": "Con el motor encendido acelero en ralentí alto hasta entre 120 y 140 psi, donde debe ocurrir el corte del gobernador. Escucharé la liberación de aire después del corte. Mi aguja se detuvo en ___ psi — el corte funciona."
+    },
+    "air_leak_test": {
+      "label": "Prueba de Fuga de Aire Estática",
+      "script": "Motor apagado, llave encendida, válvulas de aire empujadas hacia adentro. Piso y mantengo el pedal del freno, espero que el manómetro se estabilice y arranco mi cronómetro. En un minuto no puedo perder más de {{leak_limit_applied}} psi. Empezando en ___ psi — pasó un minuto y solo perdí ___ psi."
+    },
+    "low_air_warning": {
+      "label": "Alarma de Aire Bajo — Luz y Zumbador",
+      "script": "Motor apagado, llave encendida, válvulas adentro. Bombeo el pedal del freno hacia abajo. La luz y el zumbador de aire bajo deben encenderse a 55 psi o más. Se encendió en ___ psi — mi alarma de aire bajo funciona."
+    },
+    "spring_brakes_popout": {
+      "label": "Frenos de Resorte — Salto de Válvulas",
+      "script": "Sigo bombeando los frenos. Entre 45 y 20 psi las dos válvulas deben saltar solas. Estoy mirando las válvulas, no el manómetro — no jalo las válvulas. Saltaron en ___ psi — mis frenos de resorte funcionan."
+    },
+    "rate_of_buildup": {
+      "label": "Velocidad de Acumulación de Aire",
+      "script": "Frenos de estacionamiento puestos, palanca en neutral, arranco el motor de forma segura y mantengo 1500 rpm. Primero mi alarma de aire bajo debe apagarse a 55 psi o más. Luego cronometro de 85 a 100 psi en ralentí — debe tomar 45 segundos o menos. Tomó ___ segundos."
+    },
+    "parking_brake_check": {
+      "label": "Prueba del Freno de Estacionamiento del Tractor",
+      "script": "Suelto el freno del remolque — empujo la válvula roja hacia adentro — pongo el camión en marcha e intento moverlo suavemente. El camión no se mueve, lo que significa que mis frenos de estacionamiento del tractor sostienen."
+    },
+    "trailer_brake_check": {
+      "label": "Prueba del Freno del Remolque",
+      "script": "Suelto el freno de estacionamiento del tractor — empujo la válvula amarilla hacia adentro — y dejo la roja afuera. Pongo el camión en marcha e intento moverlo suavemente. El camión no se mueve, lo que significa que mis frenos del remolque sostienen y el remolque quedó conectado."
+    },
+    "service_brake_check": {
+      "label": "Prueba del Freno de Servicio",
+      "script": "Suelto los dos frenos — ambas válvulas adentro. Pongo el camión en marcha, avanzo entre 5 y 10 mph y aplico el freno de servicio. El camión frena derecho: no jala a la izquierda ni a la derecha, sin sensación extraña en el pedal, sin demora al frenar, sin vibración, sin ruidos ni olores raros."
+    },
+    "light_indicators": {
+      "label": "Indicadores del Tablero",
+      "script": "Con las luces encendidas reviso mis indicadores del tablero: las luces altas muestran luz azul, mis direccionales derecha e izquierda muestran flechas verdes intermitentes, y mis intermitentes de emergencia muestran las dos flechas verdes parpadeando juntas."
+    },
+    "fire_extinguisher": {
+      "label": "Extintor de Incendios",
+      "script": "Mi extintor está apretado y seguro, completamente cargado en el verde, vigente, y el pin está presente y seguro."
+    },
+    "triangles": {
+      "label": "Triángulos Reflectantes",
+      "script": "Tengo tres triángulos reflectantes de advertencia, apretados y seguros, sin daños y limpios."
+    },
+    "spare_fuses": {
+      "label": "Fusibles de Repuesto",
+      "script": "Llevo una caja de fusibles y relés de repuesto — al menos seis fusibles de repuesto."
+    },
+    "windshield": {
+      "label": "Parabrisas",
+      "script": "Mi parabrisas está apretado y seguro, sin grietas, sin calcomanías ilegales, limpio, y nada bloquea mi visión."
+    },
+    "mirrors": {
+      "label": "Espejos",
+      "script": "Mis espejos están ajustados a mí, apretados y seguros, sin grietas, no rotos, limpios, sin calcomanías ilegales, y nada bloquea mi visión."
+    },
+    "wipers": {
+      "label": "Limpiaparabrisas",
+      "script": "Mis limpiaparabrisas están bien montados sin pernos faltantes, no rotos, las plumillas sin cortes ni grietas, y hacen contacto parejo con el parabrisas."
+    },
+    "washer_fluid": {
+      "label": "Líquido Limpiaparabrisas",
+      "script": "El líquido limpiaparabrisas está presente, y los limpiaparabrisas y el lavador funcionan correctamente."
+    },
+    "heater_defroster": {
+      "label": "Calefacción / Desempañador",
+      "script": "Demuestro que mi calefacción y mi desempañador están operativos."
+    },
+    "horns": {
+      "label": "Bocinas",
+      "script": "Verifico que las dos bocinas funcionan — mi bocina de ciudad y mi bocina de aire de carretera."
+    },
+    "truck_leveled": {
+      "label": "Camión Nivelado",
+      "script": "Mi camión está nivelado y no hay fugas debajo — sin aceite, sin grasa, sin refrigerante."
+    },
+    "front_lenses": {
+      "label": "Luces de Gálibo, Intermitentes y Direccionales",
+      "script": "Mis luces de gálibo, intermitentes y direccionales están apretadas y seguras, sin grietas, y del color correcto."
+    },
+    "headlights": {
+      "label": "Faros — Luz Alta y Baja",
+      "script": "Mis faros, luz alta y luz baja, están apretados y seguros, sin grietas, limpios, y del color correcto."
+    },
+    "coolant": {
+      "label": "Refrigerante",
+      "script": "Verifico que el refrigerante está en el nivel correcto por el visor o la varilla. El depósito está bien montado y sin grietas, y las mangueras no tienen cortes ni rajaduras y están bien sujetas en ambos extremos."
+    },
+    "oil": {
+      "label": "Aceite del Motor",
+      "script": "Indico dónde está mi varilla de aceite y que el aceite está en el nivel correcto."
+    },
+    "power_steering": {
+      "label": "Líquido de Dirección Hidráulica",
+      "script": "Verifico que el líquido de dirección hidráulica está en el nivel correcto por el visor o la varilla. El depósito está bien sujeto y sin grietas, y las mangueras no tienen cortes ni rajaduras y están bien sujetas en ambos extremos."
+    },
+    "fluid_air_leaks": {
+      "label": "Fugas de Fluidos y Aire",
+      "script": "Parado frente al camión, verifico que no hay fugas debajo del compartimiento del motor. Reviso todas las mangueras del compartimiento — sin cortes, sin burbujas, sin fugas."
+    },
+    "steering_gear_box": {
+      "label": "Caja de Dirección",
+      "script": "Mi caja de dirección está bien montada al chasis, sin grietas, sin fugas, toda la tornillería presente, y la manguera no tiene fugas y está bien sujeta en ambos extremos."
+    },
+    "pitman_arm": {
+      "label": "Brazo Pitman",
+      "script": "Mi brazo pitman no está agrietado y está bien sujeto, toda la tornillería presente, y las tuercas de castillo y chavetas están en su lugar."
+    },
+    "drag_link": {
+      "label": "Barra de Dirección (Drag Link)",
+      "script": "Mi barra de dirección está bien sujeta en ambos extremos, toda la tornillería presente, y los bujes de goma no están cortados ni partidos y están bien engrasados."
+    },
+    "control_arms": {
+      "label": "Brazos de Control Superior e Inferior",
+      "script": "Mis brazos de control superior e inferior no están rotos y están bien sujetos, toda la tornillería presente."
+    },
+    "tie_rod": {
+      "label": "Barra de Acoplamiento (Tie Rod)",
+      "script": "Mi barra de acoplamiento no está rota y está bien sujeta, toda la tornillería presente, tuercas de castillo y chavetas en su lugar."
+    },
+    "front_tire": {
+      "label": "Llanta Delantera",
+      "script": "Mi llanta de dirección tiene desgaste parejo con profundidad de dibujo no menor a cuatro treintaidosavos. Sin cortes, sin abultamientos, sin burbujas, sin fugas de aire, sin recauchutados en el eje de dirección, y sin puntos planos. Correctamente inflada alrededor de 100 psi."
+    },
+    "rims": {
+      "label": "Rines",
+      "script": "Mis rines están apretados y seguros, sin grietas, sin dobleces, no rotos, sin soldaduras ilegales y sin agujeros ilegales."
+    },
+    "lug_nuts": {
+      "label": "Tuercas de Rueda",
+      "script": "Mis tuercas de rueda están apretadas y seguras, todas presentes, sin grietas, y sin marcas de óxido — si veo óxido pueden estar flojas y hay que apretarlas."
+    },
+    "spring_mounts": {
+      "label": "Soportes de Ballesta",
+      "script": "Mis soportes de ballesta y su tornillería no están agrietados ni rotos y están bien montados al chasis."
+    },
+    "leaf_springs": {
+      "label": "Ballestas",
+      "script": "Mis ballestas no están desplazadas ni cruzadas, sin soldaduras ilegales, y están bien montadas a los soportes."
+    },
+    "u_bolts": {
+      "label": "Pernos U",
+      "script": "Mis pernos U no están agrietados ni rotos, sin partes flojas, y sin pernos faltantes."
+    },
+    "shock_absorber": {
+      "label": "Amortiguador",
+      "script": "Mi amortiguador no está doblado ni roto y está bien montado, sin fugas visibles, y los bujes de goma no están desgastados."
+    },
+    "brake_hose": {
+      "label": "Manguera del Sistema de Frenos de Aire",
+      "script": "Mi manguera de freno de aire está apretada y segura con conexiones en ambos extremos, sin grietas, sin fugas de aire, sin desgaste y sin resequedad."
+    },
+    "air_chamber": {
+      "label": "Cámara de Aire",
+      "script": "Mi cámara de aire está bien montada, apretada y segura, sin grietas, no rota, sin fugas de aire, y las abrazaderas están apretadas y no faltan."
+    },
+    "brake_contaminants": {
+      "label": "Tambores, Zapatas y Balatas",
+      "script": "Mi tambor de freno no está agrietado y mis zapatas y balatas no están desgastadas a menos de un cuarto de pulgada. No hay contaminantes — sin aceite, sin grasa, sin residuos entre el tambor y las zapatas."
+    },
+    "turn_signal_side": {
+      "label": "Direccional y Reflectores Laterales",
+      "script": "Mi luz direccional está apretada y segura, sin grietas, limpia, color ámbar correcto, y funciona como direccional y como luz de emergencia. Mis reflectores son ámbar adelante y rojos atrás."
+    },
+    "mirrors_side": {
+      "label": "Espejos (Dispositivos de Monitoreo)",
+      "script": "Mis espejos están apretados y seguros a la puerta, sin grietas, no rotos, limpios, y sin calcomanías ilegales que bloqueen mi visión."
+    },
+    "fuel_tank": {
+      "label": "Tanque de Combustible",
+      "script": "Mi tanque de combustible está apretado y seguro, sin grietas, no doblado, sin fugas. La tapa está presente, apretada y segura. Las correas están seguras y sin grietas."
+    },
+    "def_tank": {
+      "label": "Tanque de DEF",
+      "script": "Mi tanque de DEF está apretado y seguro, sin grietas, no doblado, sin fugas. La tapa está presente, apretada y segura, sin grietas ni fugas."
+    },
+    "battery": {
+      "label": "Batería",
+      "script": "Mi caja y tapa de batería están aseguradas, sin grietas, sin soldaduras rotas, y los conectores de la batería están asegurados. Los cables no están expuestos, corroídos, rasgados ni rotos."
+    },
+    "frame": {
+      "label": "Chasis",
+      "script": "Mi chasis no tiene grietas, no está doblado, torcido ni roto, sin soldaduras ilegales, y sin óxido perforante."
+    },
+    "electrical_line": {
+      "label": "Línea Eléctrica",
+      "script": "Mi línea eléctrica — el cable verde — es flexible y no toca el chasis, la pasarela, el tractor ni el remolque. Sin cables expuestos y sin cinta ilegal. Está apretada y segura a mi tractor con los siete pines y a la caja eléctrica de mi remolque con los siete pines. Los pines no están doblados ni rotos, sin residuos, y los siete están presentes."
+    },
+    "air_lines": {
+      "label": "Líneas de Aire — Servicio y Emergencia",
+      "script": "Mi línea de servicio es la manguera azul y mi línea de emergencia es la roja. No tocan el tractor, el remolque ni la pasarela, son flexibles, sin cortes, sin burbujas, sin fugas. Están apretadas y seguras a mi tractor con las conexiones y a mi remolque con las glad hands, y los sellos de goma de las glad hands no están desgastados."
+    },
+    "fifth_wheel_skid": {
+      "label": "Placa de la Quinta Rueda",
+      "script": "Mi placa de la quinta rueda está apretada y segura a la plataforma, sin grietas, no rota, sin soldaduras ilegales, y bien engrasada. No hay espacio entre la placa y el delantal del remolque."
+    },
+    "king_pin": {
+      "label": "Perno Rey y Delantal",
+      "script": "Mi perno rey está bien montado, no doblado ni agrietado, sin soldaduras ilegales, y bien engrasado. Mi delantal está bien montado al remolque, sin grietas ni roturas, y sin agujeros ni soldaduras ilegales."
+    },
+    "locking_jaws": {
+      "label": "Mordazas de Bloqueo",
+      "script": "Mi mordaza está bien montada, sin grietas, sin soldaduras ilegales, bien engrasada, y está en posición cerrada todo alrededor del perno rey."
+    },
+    "locking_pins": {
+      "label": "Pines, Manija de Liberación y Pernos Pivote",
+      "script": "Mis pines de montaje están presentes, completamente engranados y en posición cerrada. Mi manija de liberación no está rota y está en posición cerrada hasta el fondo. Mis pernos pivote están presentes, sin grietas ni roturas."
+    },
+    "landing_gear": {
+      "label": "Patas de Apoyo",
+      "script": "Mis patas de apoyo están completamente levantadas, bien montadas, no rotas, sin soldaduras ilegales. La manivela está presente, no rota, guardada en su soporte, y es operativa."
+    },
+    "trailer_clearance_lights": {
+      "label": "Luces de Gálibo del Remolque",
+      "script": "Mis luces de gálibo del remolque están apretadas y seguras, limpias, sin grietas, color ámbar correcto adelante y rojo atrás."
+    },
+    "dot_tape": {
+      "label": "Cinta Reflectante DOT",
+      "script": "Mi cinta DOT está presente, bien pegada, no sucia, y cubre al menos el cincuenta por ciento del costado de mi remolque. Color rojo y blanco correcto."
+    },
+    "rear_lenses": {
+      "label": "Micas y Reflectores",
+      "script": "Mis micas y reflectores no están agrietados, rotos ni flojos, están limpios y del color correcto. Funcionan como direccionales, luces de emergencia, luces de freno, marcadores y reflectores."
+    },
+    "rear_clearance": {
+      "label": "Luces de Gálibo",
+      "script": "Mis luces de gálibo están apretadas, seguras, sin grietas, del color correcto, limpias y funcionando."
+    },
+    "rear_lights": {
+      "label": "Direccionales, Freno, Gálibo e Intermitentes",
+      "script": "Mis direccionales, luces de freno, luces de gálibo y luces intermitentes están apretadas, seguras, sin grietas, del color correcto y funcionando."
+    },
+    "rr_procedure": {
+      "label": "Procedimiento de Cruce de Ferrocarril",
+      "script": "A doscientos pies enciendo mis intermitentes y reviso el tráfico. Avanzo hasta entre quince y cincuenta pies de las vías. Me detengo, bajo mi ventana, miro y escucho si viene un tren. No veo ni escucho un tren — es seguro. Tengo espacio del otro lado para librar las vías completamente. Me mantengo a mi derecha. Avanzo sin cambiar de marcha. Cuando el remolque pasa las vías apago mis intermitentes, reviso el tráfico y acelero."
+    },
+    "emergency_procedure": {
+      "label": "Procedimiento de Parada de Emergencia",
+      "script": "Me orillo, subo mis válvulas de freno, pongo el camión en neutral, enciendo mis intermitentes de emergencia y coloco mis tres triángulos reflectantes. Luego reviso el tráfico antes de subir y acelerar."
+    }
+  },
+  "_untranslated_items": []
+}

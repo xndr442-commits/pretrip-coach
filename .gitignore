@@ -1,0 +1,12 @@
+# Working files — content is already extracted into content/
+source/
+assets/reference/extracted/
+assets/reference/pages/
+
+# Build artifacts
+PreTripCoach_handoff.zip
+.DS_Store
+node_modules/
+.expo/
+dist/
+*.log

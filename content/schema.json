@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fenix.school/schemas/pretrip-content-1.0.0.json",
+  "title": "Pre-Trip Coach content",
+  "type": "object",
+  "required": ["schema_version", "content_version"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "content_version": { "type": "string" },
+    "standards": { "type": "object" },
+    "grading": {
+      "type": "object",
+      "properties": {
+        "pass_threshold_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "auto_fail_sections": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "order", "title"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "order": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string" },
+          "checklist_category": { "type": "string" },
+          "auto_fail_section": { "type": "boolean" },
+          "type": { "enum": ["items", "light_sequence", "procedure"] },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "label", "script", "concepts"],
+              "properties": {
+                "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+                "label": { "type": "string", "minLength": 1 },
+                "action": { "type": "string" },
+                "image": { "type": ["string", "null"] },
+                "script": { "type": "string", "minLength": 10 },
+                "auto_fail": { "type": "boolean" },
+                "concepts": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["id", "label", "accept"],
+                    "properties": {
+                      "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+                      "label": { "type": "string" },
+                      "accept": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+                      "required": { "type": "boolean" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "steps"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "auto_fail": { "type": "boolean" },
+          "preconditions": { "type": "array", "items": { "type": "string" } },
+          "steps": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "kind", "say", "must"],
+              "properties": {
+                "id": { "type": "string" },
+                "kind": { "enum": ["say", "do", "report", "timer"] },
+                "say": { "type": "string" },
+                "must": { "type": "array", "items": { "type": "string" } },
+                "seconds": { "type": "number" },
+                "reading": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
